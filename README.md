@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ROS Industries | Global Engineering Solutions
 
-## Getting Started
+A high-performance, multilingual industrial platform for **ROS Industries**, featuring automated localization, precision engineering product showcases, and a robust lead management system.
 
-First, run the development server:
+## 🚀 Key Features
 
+### 🌍 Global Localization & Routing
+- **Dynamic Routing**: Built on Next.js App Router with `/[lang]/[country]` structure.
+- **Automated Translation**: Integration with Google Translate API for on-the-fly content translation across multiple languages (German, French, Spanish, etc.).
+- **Smart Path Preservation**: Region selector preserves the user's current page while switching languages.
+
+### 📊 Integrated Lead Capture
+- **Multi-channel Capture**:
+  - **Quick Inquiry**: Floating action button in all pages for rapid engagement.
+  - **Professional Quote Portal**: Dedicated `/request-quote` page for detailed engineering requirements.
+- **Backend Validation**: Strict data integrity using Zod schemas.
+- **Database**: High-performance persistence layer using Prisma and SQLite.
+
+### 🔐 Secure Admin Dashboard
+- **Protected Access**: Admin portal gated by JWT-based authentication and Next.js middleware.
+- **Leads Management**: Real-time view of all enquiries with detailed message reporting.
+- **Metrics & Analytics**: Quick-view cards for total leads, daily captures, and source breakdown.
+- **Interactive Portal**: Accessible at `/admin/login`.
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js 15, React 19, Tailwind CSS 4, Framer Motion (Animations).
+- **Backend**: Next.js Route Handlers, JWT (jose), Bcrypt.js.
+- **Database**: SQLite (Development-ready), Prisma ORM.
+- **Translation**: Google Translate API Extensions.
+
+## 🏁 Getting Started
+
+### 1. Installation
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Database Setup
+Ensure you have the environment variables set up (default `.env` is pre-configured for SQLite).
+```bash
+# Push the schema to local dev.db
+npx prisma db push
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Seed the admin user
+node prisma/seed.js
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. Run Development Server
+```bash
+npm run dev
+```
 
-## Learn More
+## 👤 Admin Portal Credentials
 
-To learn more about Next.js, take a look at the following resources:
+- **URL**: `/admin/login`
+- **User**: `ram@ros.com`
+- **Pass**: `Ram@12345`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `src/app/[lang]/[country]`: Localized main application pages.
+- `src/app/admin`: Admin portal pages (Login & Dashboard).
+- `src/app/api`: Backend endpoints for leads and auth.
+- `src/components`: Reusable UI components (Navbar, Footer, ContactButton, etc.).
+- `src/lib`: Shared utilities (Auth logic, Prisma client, Zod schemas).
+- `prisma/`: Database schema and seed scripts.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+© 2026 ROS Industries. Precision Engineering. Global Reach.
