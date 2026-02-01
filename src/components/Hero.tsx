@@ -12,7 +12,7 @@ export default function Hero({ dict, lang, country }: { dict?: Dictionary['hero'
     const prefix = `/${lang || 'en'}/${country || 'us'}`;
 
     return (
-        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-ros-gray-dark py-20 lg:py-0">
+        <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-ros-gray-dark pt-32 pb-20 lg:pt-10 lg:pb-10">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image

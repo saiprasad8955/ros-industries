@@ -61,14 +61,14 @@ export default function ContactButton({ dict }: { dict?: Dictionary['contact_but
 
     return (
         <>
-            <div className="fixed bottom-8 right-8 z-40 flex flex-col items-end gap-4">
+            <div className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-[100] flex flex-col items-end gap-4 max-w-[calc(100vw-2rem)]">
                 <AnimatePresence>
                     {isOpen && (
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9, y: 20 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                            className="bg-white rounded-2xl shadow-2xl p-6 w-[340px] mb-2 border border-gray-100"
+                            className="bg-white rounded-2xl shadow-2xl p-4 sm:p-6 w-[calc(100vw-2rem)] sm:w-[380px] max-h-[85vh] overflow-y-auto mb-2 border border-gray-100"
                         >
                             <div className="flex justify-between items-center mb-6">
                                 <div>
@@ -84,7 +84,7 @@ export default function ContactButton({ dict }: { dict?: Dictionary['contact_but
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     animate={{ opacity: 1, scale: 1 }}
-                                    className="py-12 text-center"
+                                    className="py-8 sm:py-12 text-center"
                                 >
                                     <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                                         <Send className="h-8 w-8" />
@@ -94,7 +94,7 @@ export default function ContactButton({ dict }: { dict?: Dictionary['contact_but
                                 </motion.div>
                             ) : (
                                 <form className="space-y-4" onSubmit={handleSubmit}>
-                                    <div className="grid grid-cols-2 gap-3">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                         <div>
                                             <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">Name</label>
                                             <input
@@ -131,7 +131,7 @@ export default function ContactButton({ dict }: { dict?: Dictionary['contact_but
                                     </div>
 
                                     <div>
-                                        <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">Phone (Optional)</label>
+                                        <label className="block text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1">Phone</label>
                                         <input
                                             type="tel"
                                             value={formData.phone}
@@ -155,7 +155,7 @@ export default function ContactButton({ dict }: { dict?: Dictionary['contact_but
 
                                     <button
                                         disabled={status === 'loading'}
-                                        className="w-full bg-ros-blue text-white py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 hover:bg-blue-700 transition-all shadow-lg shadow-ros-blue/10 disabled:opacity-50"
+                                        className="w-full bg-ros-blue text-white py-3 rounded-xl font-bold text-sm flex items-center justify-center gap-2 hover:bg-blue-700 transition-all shadow-lg shadow-ros-blue/10 disabled:opacity-50 active:scale-[0.98]"
                                     >
                                         {status === 'loading' ? 'Sending...' : t.send}
                                         {status !== 'loading' && <Send className="h-3 w-3" />}
@@ -169,11 +169,11 @@ export default function ContactButton({ dict }: { dict?: Dictionary['contact_but
 
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className="h-14 w-14 rounded-full bg-ros-blue text-white shadow-xl hover:bg-blue-700 transition-all flex items-center justify-center hover:scale-110 active:scale-95 group relative"
+                    className="h-12 w-12 sm:h-14 sm:w-14 rounded-full bg-ros-blue text-white shadow-2xl hover:bg-blue-700 transition-all flex items-center justify-center hover:scale-110 active:scale-95 group relative border-2 border-white/20"
                     aria-label={t.label}
                 >
                     {isOpen ? <X className="h-6 w-6" /> : <MessageSquare className="h-6 w-6" />}
-                    {!isOpen && <span className="absolute right-full mr-4 bg-ros-gray-dark text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden sm:block">Quick Inquiry</span>}
+                    {!isOpen && <span className="absolute right-full mr-4 bg-ros-gray-dark text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden lg:block">Quick Inquiry</span>}
                 </button>
             </div>
         </>
