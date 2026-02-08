@@ -1,6 +1,6 @@
 import { getDictionary } from '@/app/utils/get-dictionary';
 import Link from 'next/link';
-import { ArrowRight, Settings, Cylinder, Warehouse, Hammer, Box } from 'lucide-react';
+import { ArrowRight, Settings, Cylinder, Warehouse, Hammer, Box, Wind } from 'lucide-react';
 
 import Image from 'next/image';
 
@@ -15,7 +15,8 @@ export default async function ProductsPage({ params }: { params: Promise<{ lang:
         "Warehouse": Warehouse,
         "Hammer": Hammer,
         "ArrowRight": ArrowRight,
-        "Box": Box
+        "Box": Box,
+        "Wind": Wind
     };
 
     return (

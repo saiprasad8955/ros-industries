@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, Menu, X, Settings, Phone, User, Cylinder, Warehouse, Hammer } from 'lucide-react';
+import { ChevronDown, Menu, X, Settings, Phone, User, Cylinder, Warehouse, Hammer, Wind } from 'lucide-react';
 import RegionSelector from './RegionSelector';
 import { Dictionary } from '@/app/dictionaries';
 import { LucideIcon } from 'lucide-react';
@@ -43,6 +43,7 @@ export default function Navbar({ dict, lang, country }: { dict?: Dictionary['nav
       href: `/${lang || 'en'}/${country || 'us'}/products`,
       children: [
         { name: dict.menu_products.hydraulics, href: `/${lang || 'en'}/${country || 'us'}/products/hydraulics`, icon: Settings, desc: dict.menu_products.hydraulics_desc },
+        { name: dict.menu_products.pneumatics, href: `/${lang || 'en'}/${country || 'us'}/products/pneumatics`, icon: Wind, desc: dict.menu_products.pneumatics_desc },
         { name: 'Hoses', href: `/${lang || 'en'}/${country || 'us'}/products/hoses`, icon: Cylinder, desc: 'High-performance industrial hoses' },
         { name: 'Industrial Sheds', href: `/${lang || 'en'}/${country || 'us'}/products/industrial-shed`, icon: Warehouse, desc: 'Steel fabricated structures' },
         { name: 'Fabrication', href: `/${lang || 'en'}/${country || 'us'}/products/fabrication`, icon: Hammer, desc: 'Machining & assemblies' },

@@ -24,6 +24,8 @@ export const dictionaries = {
             menu_products: {
                 hydraulics: "Hydraulics",
                 hydraulics_desc: "High-performance hydraulic systems",
+                pneumatics: "Pneumatics",
+                pneumatics_desc: "Advanced pneumatic & automation solutions",
             },
             menu_industries: {
                 auto: "Automotive",
@@ -202,9 +204,26 @@ export const dictionaries = {
             categories: [
                 { name: "Filtration Systems", href: "/products/hydraulics/filtration-systems", desc: "Advanced oil purification and monitoring systems." },
                 { name: "Manifold Blocks", href: "/products/hydraulics/manifold-blocks", desc: "CS, SS, and Aluminium manifolds for complex circuit control." },
-                { name: "Tank Accessories", href: "/products/hydraulics/tank-accessories", desc: "Breathers, level gauges, and suction strainers." },
+                { name: "Tank Accessories", href: "/products/hydraulics/tank-accessories", desc: "Breathers, level gauges, Y-strainers and suction strainers." },
                 { name: "Clamps & Fittings", href: "/products/hydraulics/clamps-fittings", desc: "Pipe clamps, hose clamps, and fittings." },
+                { name: "Oil Purification", href: "/products/hydraulics/oil-purification", desc: "LVDH machines and centrifugal oil-water separators." },
+                { name: "Rotary Actuators", href: "/products/hydraulics/rotary-actuators", desc: "High-torque hydraulic rotary actuators." },
+                { name: "Pressure Intensifiers", href: "/products/hydraulics/pressure-intensifiers", desc: "Hydraulic pressure boosters for high-output needs." },
                 { name: "Hoses", href: "/products/hoses", desc: "High-pressure hydraulic hoses and protective guards." }
+            ]
+        },
+        pneumatics_page: {
+            title: "Pneumatic Systems & Automation",
+            subtitle: "Precision-engineered pneumatic solutions from individual components to complete automated control systems.",
+            categories: [
+                { name: "Cylinders", href: "/products/pneumatics/cylinders", desc: "Single and double-acting stainless & aluminum cylinders." },
+                { name: "Valves & Sensors", href: "/products/pneumatics/valves-sensors", desc: "Solenoid valves, directional controls, and digital sensors." },
+                { name: "Air Preparation", href: "/products/pneumatics/air-preparation", desc: "Industrial filters, regulators, and lubricators (FRL)." },
+                { name: "Power Packs & Systems", href: "/products/pneumatics/power-packs-systems", desc: "Pneumatic power generation and specialized test benches." },
+                { name: "Manifolds", href: "/products/pneumatics/manifolds", desc: "Compact distribution blocks and valve assemblies." },
+                { name: "Air Reservoirs", href: "/products/pneumatics/air-reservoirs", desc: "Storage tanks and accessories for compressed air systems." },
+                { name: "Control & Automation", href: "/products/pneumatics/automation", desc: "Integrated control cabinets and pneumatic logic solutions." },
+                { name: "Hose & Fittings", href: "/products/pneumatics/hoses-fittings", desc: "PU/Nylon hoses and push-to-connect fittings." }
             ]
         },
         power_packs_page: {
@@ -236,6 +255,156 @@ export const dictionaries = {
                 "Maintain NAS Class",
                 "Contamination monitoring sensor as option",
                 "Option available to remove Water & gas contamination"
+            ]
+        },
+        oil_purification_page: {
+            title: "Oil Purification Systems",
+            subtitle: "Advanced contamination control for hydraulic and lubrication oils, ensuring maximum system reliability.",
+            lvdh: {
+                title: "Low Vacuum Dehydration Machine (LVDH)",
+                desc: "High-efficiency water and gas removal from hydraulic and transformer oils.",
+                features: [
+                    "Removes Free, Emulsified, and Dissolved Water",
+                    "Vacuum levels up to 700-750 mm of Hg",
+                    "Integrated particulate filtration",
+                    "Automatic PLC-controlled operation",
+                    "Maintains NAS/ISO cleanliness classes"
+                ]
+            },
+            centrifugal: {
+                title: "Centrifugal Oil-Water Separator",
+                desc: "High-G force separation for continuous oil purification.",
+                features: [
+                    "3-Phase separation (Oil, Water, Solids)",
+                    "Separates particles down to 0.5 microns",
+                    "No filter elements to replace",
+                    "Continuous operation capability",
+                    "Ideal for high-volume processing"
+                ]
+            }
+        },
+        rotary_actuators_page: {
+            title: "Hydraulic Rotary Actuators",
+            subtitle: "Compact, high-torque solutions for precise angular motion in demanding environments.",
+            features: [
+                "High Torque Density",
+                "Precise Angular Control",
+                "Compact and Robust Design",
+                "Multiple rotation angles available"
+            ],
+            types: [
+                { name: "Helical Spline", desc: "High torque and accuracy for heavy-duty positioning." },
+                { name: "Rack & Pinion", desc: "Durable and efficient for industrial automation." },
+                { name: "Vane Type", desc: "Compact and smooth operation for simpler tasks." }
+            ]
+        },
+        pressure_intensifiers_page: {
+            title: "Hydraulic Pressure Intensifiers",
+            subtitle: "Boost your existing hydraulic pressure without additional power packs.",
+            features: [
+                "Working Pressure up to 1000 Bar+",
+                "Compact and Lightweight design",
+                "Easy integration into existing circuits",
+                "Constant force and pressure output",
+                "No rotating parts for long life"
+            ],
+            applications: [
+                "Demolition Tools",
+                "Hydroforming",
+                "Bolt Tensioning",
+                "Subsea ROV Tools"
+            ]
+        },
+        pneumatics_cylinders_page: {
+            title: "Pneumatic Cylinders",
+            subtitle: "Reliable linear and rotary motion for industrial automation and manufacturing.",
+            types: [
+                { name: "Single Acting", desc: "Low-cost solution for simple push/pull movements." },
+                { name: "Double Acting", desc: "Full control in both directions for precise strokes." },
+                { name: "Rodless Cylinders", desc: "Space-saving design for long stroke applications." },
+                { name: "Compact & Guided", desc: "High-performance modules for tight spaces." }
+            ],
+            specs: {
+                material: "Stainless Steel / Aluminum",
+                bore: "12mm to 320mm",
+                stroke: "Custom lengths available",
+                standard: "ISO 15552 / ISO 6432"
+            }
+        },
+        pneumatics_valves_sensors_page: {
+            title: "Pneumatic Valves & Sensors",
+            subtitle: "The intelligence of your pneumatic system. Precise control and real-time monitoring.",
+            valves: [
+                "Direct-acting Solenoid Valves",
+                "Pilot-operated Directional Controls",
+                "Proportional Flow & Pressure Valves",
+                "Mechanical & Manual Overrides"
+            ],
+            sensors: [
+                "Digital Pressure Sensors",
+                "Magnetic Cylinder Position Sensors",
+                "Air Flow Meters",
+                "Vacuum Sensors"
+            ]
+        },
+        pneumatics_air_preparation_page: {
+            title: "Air Preparation Units (FRL)",
+            subtitle: "Clean, dry, and regulated air for protected and efficient pneumatic systems.",
+            sections: {
+                filter: { title: "Filtration", desc: "Removes particles, moisture, and oil aerosols down to 0.01µm." },
+                regulator: { title: "Regulation", desc: "Maintains constant working pressure for consistent performance." },
+                lubricator: { title: "Lubrication", desc: "Ensures smooth operation of air tools and actuators." }
+            }
+        },
+        pneumatics_manifolds_page: {
+            title: "Pneumatic Manifold Blocks",
+            subtitle: "Centralized air distribution for compact and organized system layouts.",
+            features: [
+                "Compact Aluminum / Polymer variants",
+                "Integrated Solenoid Valve mounting",
+                "Single-piece or Modular designs",
+                "Reduced piping and leak points"
+            ]
+        },
+        pneumatics_air_reservoirs_page: {
+            title: "Air Reservoirs & Accessories",
+            subtitle: "Buffer storage and pressure stabilization for compressed air networks.",
+            features: [
+                "Vertical & Horizontal orientations",
+                "Stainless Steel or Powder-coated Carbon Steel",
+                "ASME / PED / CE certified",
+                "Capacities from 5L to 10,000L"
+            ],
+            accessories: [
+                "Auto-drain Valves",
+                "Pressure Relief Valves",
+                "Digital Pressure Gauges"
+            ]
+        },
+        pneumatics_automation_page: {
+            title: "Control & Automation",
+            subtitle: "Turn-key pneumatic control systems designed for complex industrial logic.",
+            services: [
+                "Custom Control Cabinet Design",
+                "Pneumatic Logic & PLC Integration",
+                "Fieldbus/IO-Link Communication",
+                "On-site Installation & Commissioning"
+            ]
+        },
+        pneumatics_hoses_fittings_page: {
+            title: "Pneumatic Hoses & Fittings",
+            subtitle: "Secure and leak-free connections for reliable air transmission.",
+            hoses: [
+                "Polyurethane (PU) - Highly Flexible",
+                "Nylon (PA) - High Pressure & Temp",
+                "PTFE - Chemical Resistance",
+                "Anti-static Options"
+            ],
+            fittings: [
+                "Brass Push-to-connect",
+                "Stainless Steel 316 Fittings",
+                "Quick Disconnect Couplers",
+                "Function Fittings (Speed control/Check)"
             ]
         },
         manifolds_page: {
@@ -332,7 +501,8 @@ export const dictionaries = {
             title: "Our Products",
             subtitle: "Discover our comprehensive range of industrial engineering solutions, from advanced hydraulics to large-scale infrastructure.",
             categories: [
-                { name: "Hydraulics", href: "/products/hydraulics", desc: "Manifolds and filtration systems.", icon: "Settings" },
+                { name: "Hydraulics", href: "/products/hydraulics", desc: "Manifolds, filtration, and precision actuators.", icon: "Settings" },
+                { name: "Pneumatics", href: "/products/pneumatics", desc: "Air systems, cylinders, and automation control.", icon: "Wind" },
                 { name: "Hoses", href: "/products/hoses", desc: "High-pressure hoses, fittings, and guards.", icon: "Cylinder" },
                 { name: "Industrial Sheds", href: "/products/industrial-shed", desc: "Custom steel fabricated structures for warehousing and plants.", icon: "Warehouse" },
                 { name: "Fabrication", href: "/products/fabrication", desc: "Heavy fabrication and precision machining services.", icon: "Hammer" },
@@ -356,6 +526,7 @@ export const dictionaries = {
             quick_links: "Quick Links",
             links_solutions: {
                 hydraulics: "Hydraulics",
+                pneumatics: "Pneumatics",
             },
             links_focus: {
                 power_packs: "Power Packs",
