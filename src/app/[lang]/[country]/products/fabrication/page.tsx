@@ -18,6 +18,7 @@ export default async function FabricationPage({ params }: { params: Promise<{ la
                         alt="Fabrication Workshop"
                         fill
                         className="object-cover"
+                        sizes="100vw"
                         priority
                     />
                     <div className="absolute inset-0 bg-black/10"></div>

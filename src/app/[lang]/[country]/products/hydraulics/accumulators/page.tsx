@@ -1,5 +1,5 @@
 import { getDictionary } from '@/app/utils/get-dictionary';
-import { Battery, CheckCircle2, Plus, ArrowRight } from 'lucide-react';
+import { CheckCircle2, Plus, ArrowRight } from 'lucide-react';
 
 import Image from 'next/image';
 
@@ -18,6 +18,7 @@ export default async function AccumulatorsPage({ params }: { params: Promise<{ l
                         alt="Hydraulic Accumulators"
                         fill
                         className="object-cover"
+                        sizes="100vw"
                         priority
                     />
                     <div className="absolute inset-0 bg-black/10"></div>
@@ -69,7 +70,7 @@ export default async function AccumulatorsPage({ params }: { params: Promise<{ l
                         <ul className="space-y-4 relative z-10">
                             {t.features.list.map((feature: string, i: number) => (
                                 <li key={i} className="flex items-start gap-3">
-                                    <CheckCircle2 className="w-5 h-5 text-ros-blue flex-shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="w-5 h-5 text-ros-blue shrink-0 mt-0.5" />
                                     <span className="text-gray-700 font-medium">{feature}</span>
                                 </li>
                             ))}

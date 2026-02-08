@@ -118,8 +118,9 @@ export default function AboutView({ dict }: { dict?: Dictionary['about'] }) {
                                 alt="Industrial Automation"
                                 fill
                                 className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-60 mix-blend-multiply hover:opacity-80"
+                                sizes="(max-width: 1024px) 100vw, 50vw"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/20 to-transparent" />
+                            <div className="absolute inset-0 bg-linear-to-t from-white/90 via-white/20 to-transparent" />
                             <div className="absolute bottom-6 left-6 right-6">
                                 <div className="bg-white/80 backdrop-blur-md p-3 rounded-xl inline-flex mb-2 border border-white shadow-sm">
                                     <Globe2 className="w-6 h-6 text-ros-blue" />

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -16,8 +16,7 @@ import {
     RefreshCcw,
     ChevronRight,
     MessageSquare,
-    X,
-    ExternalLink
+    X
 } from 'lucide-react';
 
 interface Lead {
@@ -46,7 +45,7 @@ export default function AdminDashboard() {
     const [selectedLead, setSelectedLead] = useState<Lead | null>(null);
     const router = useRouter();
 
-    const fetchData = async () => {
+    const fetchData = useCallback(async () => {
         setLoading(true);
         try {
             const [leadsRes, statsRes] = await Promise.all([
@@ -69,11 +68,11 @@ export default function AdminDashboard() {
         } finally {
             setLoading(false);
         }
-    };
+    }, [router]);
 
     useEffect(() => {
         fetchData();
-    }, []);
+    }, [fetchData]);
 
     const filteredLeads = leads.filter(l =>
         l.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -282,7 +281,7 @@ export default function AdminDashboard() {
             {/* Lead Modal */}
             <AnimatePresence>
                 {selectedLead && (
-                    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+                    <div className="fixed inset-0 z-100 flex items-center justify-center p-4">
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}

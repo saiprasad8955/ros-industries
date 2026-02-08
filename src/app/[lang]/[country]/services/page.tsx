@@ -27,7 +27,7 @@ const ServiceColumn = ({
             <ul className="space-y-4">
                 {features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-3">
-                        <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-ros-blue flex-shrink-0" />
+                        <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-ros-blue shrink-0" />
                         <span className="text-gray-500 font-medium text-sm">{feature}</span>
                     </li>
                 ))}
@@ -57,6 +57,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
                         alt="Industrial Services"
                         fill
                         className="object-cover"
+                        sizes="100vw"
                         priority
                     />
                     <div className="absolute inset-0 bg-black/10"></div>

@@ -54,14 +54,14 @@ export default function ContactButton({ dict }: { dict?: Dictionary['contact_but
                     setErrors(data.details.fieldErrors);
                 }
             }
-        } catch (error) {
+        } catch {
             setStatus('error');
         }
     };
 
     return (
         <>
-            <div className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-[100] flex flex-col items-end gap-4 max-w-[calc(100vw-2rem)]">
+            <div className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-100 flex flex-col items-end gap-4 max-w-[calc(100vw-2rem)]">
                 <AnimatePresence>
                     {isOpen && (
                         <motion.div
@@ -72,7 +72,7 @@ export default function ContactButton({ dict }: { dict?: Dictionary['contact_but
                         >
                             <div className="flex justify-between items-center mb-6">
                                 <div>
-                                    <h3 className="font-bold text-ros-gray-dark text-lg">{t.title}</h3>
+                                    <h3 className="font-bold text-ros-blue text-lg">{t.title}</h3>
                                     <p className="text-xs text-gray-500">We'll get back to you within 24h</p>
                                 </div>
                                 <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-gray-600 p-2 hover:bg-gray-50 rounded-full transition-all">

@@ -28,6 +28,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ lang:
                         alt="Industrial Products"
                         fill
                         className="object-cover"
+                        sizes="100vw"
                         priority
                     />
                     <div className="absolute inset-0 bg-black/10"></div>
@@ -60,7 +61,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ lang:
                                 <Link
                                     href={href}
                                     key={idx}
-                                    className={`group block bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-ros-blue/50 flex flex-col items-start h-full ${!isLink ? 'cursor-default opacity-80' : ''}`}
+                                    className={`group bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-ros-blue/50 flex flex-col items-start h-full ${!isLink ? 'cursor-default opacity-80' : ''}`}
                                 >
                                     <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 ${isLink ? 'bg-ros-blue/10 group-hover:scale-110 group-hover:bg-ros-blue/20 text-ros-blue' : 'bg-gray-50 text-gray-400'}`}>
                                         <Icon className="w-7 h-7" />
@@ -68,7 +69,7 @@ export default async function ProductsPage({ params }: { params: Promise<{ lang:
                                     <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-ros-blue transition-colors">
                                         {category.name}
                                     </h3>
-                                    <p className="text-gray-600 mb-6 flex-grow leading-relaxed">
+                                    <p className="text-gray-600 mb-6 grow leading-relaxed">
                                         {category.desc}
                                     </p>
 

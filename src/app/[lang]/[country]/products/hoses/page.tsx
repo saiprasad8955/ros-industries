@@ -25,6 +25,7 @@ export default async function HosesPage({ params }: { params: Promise<{ lang: st
                         alt="High Pressure Hoses"
                         fill
                         className="object-cover"
+                        sizes="100vw"
                         priority
                     />
                     <div className="absolute inset-0 bg-black/10"></div>
@@ -83,7 +84,7 @@ export default async function HosesPage({ params }: { params: Promise<{ lang: st
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12">
                             {t.thermoplastic.items.map((item: any, i: number) => (
                                 <div key={i} className="flex gap-4">
-                                    <div className="mt-1 w-2 h-2 rounded-full bg-ros-orange flex-shrink-0" />
+                                    <div className="mt-1 w-2 h-2 rounded-full bg-ros-orange shrink-0" />
                                     <div>
                                         <h4 className="font-bold text-gray-900">{item.name}</h4>
                                         <p className="text-sm text-gray-500 mt-1">{item.desc}</p>
@@ -116,7 +117,7 @@ export default async function HosesPage({ params }: { params: Promise<{ lang: st
                 </section>
 
                 {/* 5. Hose Guards */}
-                <section className="bg-white rounded-xl p-8 border-l-4 border-ros-blue shadow-sm border-r border-t border-b border-gray-100">
+                <section className="bg-white rounded-xl p-8 border-l-4 border-gray-100 shadow-sm border-r border-t border-b">
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                         <div>
                             <h2 className="text-2xl font-bold text-gray-900 mb-2">{t.guards.title}</h2>

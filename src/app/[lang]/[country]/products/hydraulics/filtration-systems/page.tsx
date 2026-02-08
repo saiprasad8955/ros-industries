@@ -1,5 +1,5 @@
 import { getDictionary } from '@/app/utils/get-dictionary';
-import { Filter, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 import Image from 'next/image';
 
@@ -18,6 +18,7 @@ export default async function FiltrationPage({ params }: { params: Promise<{ lan
                         alt="Filtration Systems"
                         fill
                         className="object-cover"
+                        sizes="100vw"
                         priority
                     />
                     <div className="absolute inset-0 bg-black/10"></div>
@@ -58,7 +59,7 @@ export default async function FiltrationPage({ params }: { params: Promise<{ lan
                     </div>
 
                     <div className="lg:w-1/2 order-1 lg:order-2">
-                        <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl h-full min-h-[400px] flex items-center justify-center relative overflow-hidden">
+                        <div className="bg-linear-to-br from-gray-50 to-gray-100 rounded-2xl h-full min-h-[400px] flex items-center justify-center relative overflow-hidden">
                             {/* Placeholder for Filtration Image */}
                             <div className="text-gray-400 font-medium">Filtration Trolley Image</div>
                         </div>

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import {
     Send,
     CheckCircle2,
@@ -13,7 +13,7 @@ import {
     ArrowRight,
     Loader2
 } from 'lucide-react';
-import { leadSchema } from '@/lib/validations';
+// import { leadSchema } from '@/lib/validations';
 
 export default function RequestQuotePage() {
     const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -49,7 +49,7 @@ export default function RequestQuotePage() {
                     setErrors(data.details.fieldErrors);
                 }
             }
-        } catch (error) {
+        } catch {
             setStatus('error');
         }
     };
@@ -91,7 +91,7 @@ export default function RequestQuotePage() {
                             Tailored Solutions
                         </span>
                         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-gray-900">
-                            Request a <span className="text-transparent bg-clip-text bg-gradient-to-r from-ros-blue to-teal-500">Custom Quote</span>
+                            Request a <span className="text-transparent bg-clip-text bg-linear-to-r from-ros-blue to-teal-500">Custom Quote</span>
                         </h1>
                         <p className="text-xl text-gray-600 leading-relaxed">
                             Share your project requirements with us. Whether it's a standard component or a complex hydraulic system, our engineers are ready to build the perfect solution for you.

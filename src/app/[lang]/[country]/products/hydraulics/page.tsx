@@ -21,6 +21,7 @@ export default async function HydraulicsPage({ params }: { params: Promise<{ lan
                         alt="Hydraulic Systems"
                         fill
                         className="object-cover"
+                        sizes="100vw"
                         priority
                     />
                     <div className="absolute inset-0 bg-black/10"></div>

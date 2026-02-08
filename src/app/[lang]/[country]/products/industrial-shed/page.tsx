@@ -18,6 +18,7 @@ export default async function IndustrialShedPage({ params }: { params: Promise<{
                         alt="Industrial Sheds"
                         fill
                         className="object-cover"
+                        sizes="100vw"
                         priority
                     />
                     <div className="absolute inset-0 bg-black/10"></div>
@@ -47,7 +48,7 @@ export default async function IndustrialShedPage({ params }: { params: Promise<{
                         <div className="space-y-6">
                             {t.features.map((feature: string, idx: number) => (
                                 <div key={idx} className="flex items-start gap-4">
-                                    <div className="w-10 h-10 rounded-lg bg-ros-blue/10 flex items-center justify-center text-ros-blue flex-shrink-0">
+                                    <div className="w-10 h-10 rounded-lg bg-ros-blue/10 flex items-center justify-center text-ros-blue shrink-0">
                                         <CheckCircle2 className="w-6 h-6" />
                                     </div>
                                     <div>

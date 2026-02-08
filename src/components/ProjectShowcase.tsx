@@ -3,7 +3,6 @@
 import { Dictionary } from '@/app/dictionaries';
 import { motion } from 'framer-motion';
 import { ArrowRight, Settings, Warehouse, Cylinder } from 'lucide-react';
-import Image from 'next/image';
 
 export default function ProjectShowcase({ dict }: { dict?: Dictionary['project_showcase'] }) {
     if (!dict) return null;

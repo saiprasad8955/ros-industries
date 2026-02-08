@@ -1,5 +1,5 @@
 import { getDictionary } from '@/app/utils/get-dictionary';
-import { Settings, Gauge, CheckCircle2 } from 'lucide-react';
+import { Gauge, CheckCircle2 } from 'lucide-react';
 
 import Image from 'next/image';
 
@@ -18,6 +18,7 @@ export default async function PowerPacksPage({ params }: { params: Promise<{ lan
                         alt="Hydraulic Power Packs"
                         fill
                         className="object-cover"
+                        sizes="100vw"
                         priority
                     />
                     <div className="absolute inset-0 bg-black/10"></div>
@@ -54,7 +55,7 @@ export default async function PowerPacksPage({ params }: { params: Promise<{ lan
                         <ul className="space-y-4">
                             {t.fe_1_specs.map((spec: string, i: number) => (
                                 <li key={i} className="flex items-start gap-3 bg-white p-4 rounded-xl shadow-sm border border-gray-50">
-                                    <div className="mt-1 w-6 h-6 rounded-full bg-ros-blue/10 flex items-center justify-center text-ros-blue flex-shrink-0">
+                                    <div className="mt-1 w-6 h-6 rounded-full bg-ros-blue/10 flex items-center justify-center text-ros-blue shrink-0">
                                         <CheckCircle2 className="w-4 h-4" />
                                     </div>
                                     <span className="text-gray-700 font-medium">{spec}</span>
@@ -79,7 +80,7 @@ export default async function PowerPacksPage({ params }: { params: Promise<{ lan
                         <ul className="space-y-4">
                             {t.fe_2_specs.map((spec: string, i: number) => (
                                 <li key={i} className="flex items-start gap-3 bg-white p-4 rounded-xl shadow-sm border border-gray-50">
-                                    <div className="mt-1 w-6 h-6 rounded-full bg-ros-orange/10 flex items-center justify-center text-ros-orange flex-shrink-0">
+                                    <div className="mt-1 w-6 h-6 rounded-full bg-ros-orange/10 flex items-center justify-center text-ros-orange shrink-0">
                                         <Gauge className="w-4 h-4" />
                                     </div>
                                     <span className="text-gray-700 font-medium">{spec}</span>

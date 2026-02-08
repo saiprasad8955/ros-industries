@@ -20,9 +20,10 @@ export default function Hero({ dict, lang, country }: { dict?: Dictionary['hero'
                     alt="Advanced Industrial Manufacturing"
                     fill
                     priority
-                    className="object-cover opacity-10 mix-blend-overlay"
+                    sizes="100vw"
+                    className="object-cover mix-blend-overlay"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-white via-white/40 to-transparent" />
+                <div className="absolute inset-0" />
 
                 {/* Decorative Blobs */}
                 <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-ros-blue/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
@@ -40,7 +41,7 @@ export default function Hero({ dict, lang, country }: { dict?: Dictionary['hero'
                     <div className="relative backdrop-blur-xl bg-white/40 border border-white/60 p-6 md:p-12 rounded-[2.5rem] shadow-[0_20px_60px_-15px_rgba(12,189,157,0.15)] overflow-hidden group">
 
                         {/* Shimmer effect */}
-                        <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/40 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                        <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/40 to-white/0 opacity-100  transition-opacity duration-700 pointer-events-none" />
 
                         <div className="relative z-10">
                             <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 border border-ros-blue/30 rounded-full bg-white/50 backdrop-blur-md shadow-sm">

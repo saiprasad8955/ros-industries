@@ -1,5 +1,5 @@
 import { getDictionary } from '@/app/utils/get-dictionary';
-import { Boxes, Box } from 'lucide-react';
+import { Box } from 'lucide-react';
 
 import Image from 'next/image';
 
@@ -18,6 +18,7 @@ export default async function ManifoldsPage({ params }: { params: Promise<{ lang
                         alt="Hydraulic Manifolds"
                         fill
                         className="object-cover"
+                        sizes="100vw"
                         priority
                     />
                     <div className="absolute inset-0 bg-black/10"></div>

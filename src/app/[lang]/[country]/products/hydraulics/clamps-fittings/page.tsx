@@ -1,5 +1,5 @@
 import { getDictionary } from '@/app/utils/get-dictionary';
-import { Settings, Cylinder, Link as LinkIcon, ShieldCheck, Wrench } from 'lucide-react';
+import { Cylinder, Link as LinkIcon, ShieldCheck, Wrench } from 'lucide-react';
 
 import Image from 'next/image';
 
@@ -18,6 +18,7 @@ export default async function ClampsFittingsPage({ params }: { params: Promise<{
                         alt="Clamps and Fittings"
                         fill
                         className="object-cover opacity-80 mix-blend-overlay"
+                        sizes="100vw"
                         priority
                     />
                     <div className="absolute inset-0 bg-ros-gray-dark/40"></div>
@@ -54,7 +55,7 @@ export default async function ClampsFittingsPage({ params }: { params: Promise<{
                             <div className="space-y-4 mb-8">
                                 {t.hose_section.details.map((detail: string, i: number) => (
                                     <div key={i} className="flex items-center gap-3 text-gray-700">
-                                        <ShieldCheck className="w-5 h-5 text-green-600 flex-shrink-0" />
+                                        <ShieldCheck className="w-5 h-5 text-green-600 shrink-0" />
                                         <span>{detail}</span>
                                     </div>
                                 ))}
@@ -95,7 +96,7 @@ export default async function ClampsFittingsPage({ params }: { params: Promise<{
                             <ul className="space-y-4">
                                 {t.accessories_section.items.map((item: string, idx: number) => (
                                     <li key={idx} className="flex items-start gap-4 p-4 border rounded-xl border-gray-100 hover:border-ros-blue/30 transition-colors bg-gray-50">
-                                        <div className="w-2 h-2 mt-2 bg-ros-gray-dark rounded-full flex-shrink-0"></div>
+                                        <div className="w-2 h-2 mt-2 bg-ros-gray-dark rounded-full shrink-0"></div>
                                         <span className="text-lg font-medium text-gray-800">{item}</span>
                                     </li>
                                 ))}

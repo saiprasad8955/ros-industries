@@ -1,6 +1,6 @@
 import { Dictionary } from '@/app/dictionaries';
 import Link from 'next/link';
-import { MapPin, Phone, Mail, Linkedin, Twitter, Facebook, Globe } from 'lucide-react';
+import { MapPin, Phone, Mail, Linkedin, Twitter, Facebook } from 'lucide-react';
 
 export default function Footer({ dict, lang, country }: { dict?: Dictionary['footer'], lang?: string, country?: string }) {
     if (!dict) return null;

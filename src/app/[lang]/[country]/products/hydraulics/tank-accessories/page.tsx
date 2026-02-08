@@ -1,7 +1,6 @@
 import { getDictionary } from '@/app/utils/get-dictionary';
 import { Settings, Gauge, Droplet, Filter, Wind } from 'lucide-react';
-import ContactButton from '@/components/ContactButton';
-import Link from 'next/link';
+
 
 import Image from 'next/image';
 
@@ -29,6 +28,7 @@ export default async function TankAccessoriesPage({ params }: { params: Promise<
                         alt="Hydraulic Tank Accessories"
                         fill
                         className="object-cover opacity-80 mix-blend-overlay"
+                        sizes="100vw"
                         priority
                     />
                     <div className="absolute inset-0 bg-ros-gray-dark/40"></div>
@@ -63,7 +63,7 @@ export default async function TankAccessoriesPage({ params }: { params: Promise<
                                 const Icon = getIcon(item);
                                 return (
                                     <div key={idx} className="flex items-start gap-4 p-4 rounded-xl hover:bg-ros-gray-light transition-colors duration-300">
-                                        <div className="w-10 h-10 rounded-lg bg-ros-blue/10 flex items-center justify-center text-ros-blue flex-shrink-0">
+                                        <div className="w-10 h-10 rounded-lg bg-ros-blue/10 flex items-center justify-center text-ros-blue shrink-0">
                                             <Icon className="w-5 h-5" />
                                         </div>
                                         <span className="font-medium text-gray-800 self-center">{item}</span>
@@ -87,7 +87,7 @@ export default async function TankAccessoriesPage({ params }: { params: Promise<
                             </div>
                             {/* User image placeholder based on uploaded media (Image 1) */}
                         </div>
-                        <div className="bg-ros-gray-dark text-white p-8 rounded-2xl flex flex-col justify-center flex-grow relative overflow-hidden">
+                        <div className="bg-ros-gray-dark text-white p-8 rounded-2xl flex flex-col justify-center grow relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-8 opacity-10">
                                 <Settings className="w-48 h-48" />
                             </div>
