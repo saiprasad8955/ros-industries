@@ -46,7 +46,7 @@ export const dictionaries = {
             subtitle: "We unify diverse engineering disciplines to provide a single source for your critical industrial requirements.",
             // Repurposing keys for the 4 verticals to match new FeatureGrid logic
             feat_1_title: "Hydraulic Systems",
-            feat_1_desc: "Power packs, manifolds, and filtration systems engineered for peak efficiency.",
+            feat_1_desc: "Manifolds and filtration systems engineered for peak efficiency.",
             feat_1_stat: "Custom Built",
             feat_2_title: "Industrial Hoses",
             feat_2_desc: "High-pressure hoses and fittings for the most demanding fluid transfer applications.",
@@ -116,7 +116,6 @@ export const dictionaries = {
                     "Flushing & Filtration (ISO/NAS standards)",
                     "On-site Piping Installation",
                     "System Refurbishment",
-                    "Accumulator Charging & Repair"
                 ]
             },
             shed: {
@@ -201,10 +200,8 @@ export const dictionaries = {
             title: "Hydraulic Systems & Components",
             subtitle: "A complete range of hydraulic solutions from power packs to precision manifold blocks, engineered for reliability and performance.",
             categories: [
-                { name: "Hydraulic Power Packs", href: "/products/hydraulics/power-packs", desc: "Custom designed power units and test benches." },
                 { name: "Filtration Systems", href: "/products/hydraulics/filtration-systems", desc: "Advanced oil purification and monitoring systems." },
                 { name: "Manifold Blocks", href: "/products/hydraulics/manifold-blocks", desc: "CS, SS, and Aluminium manifolds for complex circuit control." },
-                { name: "Accumulators", href: "/products/hydraulics/accumulators", desc: "Bladder, Piston, and Diaphragm accumulators (Make: EPE)." },
                 { name: "Tank Accessories", href: "/products/hydraulics/tank-accessories", desc: "Breathers, level gauges, and suction strainers." },
                 { name: "Clamps & Fittings", href: "/products/hydraulics/clamps-fittings", desc: "Pipe clamps, hose clamps, and fittings." },
                 { name: "Hoses", href: "/products/hoses", desc: "High-pressure hydraulic hoses and protective guards." }
@@ -335,7 +332,7 @@ export const dictionaries = {
             title: "Our Products",
             subtitle: "Discover our comprehensive range of industrial engineering solutions, from advanced hydraulics to large-scale infrastructure.",
             categories: [
-                { name: "Hydraulics", href: "/products/hydraulics", desc: "Power packs, manifolds, accumulators, and filtration systems.", icon: "Settings" },
+                { name: "Hydraulics", href: "/products/hydraulics", desc: "Manifolds and filtration systems.", icon: "Settings" },
                 { name: "Hoses", href: "/products/hoses", desc: "High-pressure hoses, fittings, and guards.", icon: "Cylinder" },
                 { name: "Industrial Sheds", href: "/products/industrial-shed", desc: "Custom steel fabricated structures for warehousing and plants.", icon: "Warehouse" },
                 { name: "Fabrication", href: "/products/fabrication", desc: "Heavy fabrication and precision machining services.", icon: "Hammer" },

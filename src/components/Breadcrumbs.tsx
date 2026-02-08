@@ -37,27 +37,22 @@ export default function Breadcrumbs() {
         <nav
             aria-label="Breadcrumb"
             className={`w-full py-3 px-4 md:px-8 sticky z-40 transition-all duration-300 ${scrolled
-                ? 'bg-white/80 backdrop-blur-lg border-b border-gray-200/50 top-[56px]'
-                : 'bg-ros-gray-dark border-b border-white/10 top-[72px]'
+                ? 'bg-white/90 backdrop-blur-lg border-b border-gray-200/50 top-[56px] shadow-sm'
+                : 'bg-transparent border-b border-transparent top-[72px]'
                 }`}
         >
-            <div className={`container-custom max-w-7xl mx-auto flex items-center text-sm overflow-x-auto whitespace-nowrap scrollbar-hide ${scrolled ? 'text-gray-500' : 'text-gray-400'
+            <div className={`container-custom max-w-7xl mx-auto flex items-center text-sm overflow-x-auto whitespace-nowrap scrollbar-hide ${scrolled ? 'text-gray-500' : 'text-gray-500'
                 }`}>
                 <Link
                     href={`/${lang}/${country}`}
-                    className={`flex items-center transition-colors ${scrolled ? 'hover:text-ros-blue' : 'hover:text-white'}`}
+                    className={`flex items-center transition-colors hover:text-ros-blue`}
                 >
                     <Home className="w-4 h-4" />
                     <span className="sr-only">Home</span>
                 </Link>
 
                 {navSegments.map((segment, index) => {
-                    // Construct the path up to this segment
-                    // Base: /lang/country
-                    // + slice(0, index + 1) of navSegments
                     const href = `/${lang}/${country}/${navSegments.slice(0, index + 1).join('/')}`;
-
-                    // Format segment name: replace hyphens with spaces, capitalize
                     const label = segment
                         .replace(/-/g, ' ')
                         .replace(/\b\w/g, char => char.toUpperCase());
@@ -66,15 +61,15 @@ export default function Breadcrumbs() {
 
                     return (
                         <div key={segment} className="flex items-center">
-                            <ChevronRight className={`w-4 h-4 mx-2 ${scrolled ? 'text-gray-400' : 'text-gray-600'}`} />
+                            <ChevronRight className={`w-4 h-4 mx-2 text-gray-400`} />
                             {isLast ? (
-                                <span className={`font-semibold cursor-default ${scrolled ? 'text-gray-900' : 'text-white'}`}>
+                                <span className={`font-semibold cursor-default text-ros-blue`}>
                                     {label}
                                 </span>
                             ) : (
                                 <Link
                                     href={href}
-                                    className={`transition-colors ${scrolled ? 'hover:text-ros-blue' : 'hover:text-white'}`}
+                                    className={`transition-colors hover:text-ros-blue`}
                                 >
                                     {label}
                                 </Link>

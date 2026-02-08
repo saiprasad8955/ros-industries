@@ -50,10 +50,10 @@ export default function FeatureGrid({ dict }: { dict?: Dictionary['feature_grid'
     ];
 
     return (
-        <section className="py-24 bg-ros-gray-light" id="capabilities">
+        <section className="py-24 bg-white" id="capabilities">
             <div className="container-custom">
                 <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="h2-section">{dict.title}</h2>
+                    <h2 className="h2-section text-gray-900">{dict.title}</h2>
                     <p className="text-lg text-gray-600">
                         {dict.subtitle}
                     </p>
@@ -68,7 +68,7 @@ export default function FeatureGrid({ dict }: { dict?: Dictionary['feature_grid'
                 >
                     {features.map((feature) => (
                         <motion.div key={feature.name} variants={item} className="group cursor-pointer">
-                            <div className="relative h-full bg-white p-8 rounded-xl shadow-sm border border-transparent hover:border-ros-blue/20 hover:shadow-xl transition-all duration-300 overflow-hidden">
+                            <div className="relative h-full bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:border-ros-blue/50 hover:shadow-xl transition-all duration-300 overflow-hidden">
                                 <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                                     <feature.icon className="w-32 h-32 text-ros-blue" />
                                 </div>
@@ -77,7 +77,7 @@ export default function FeatureGrid({ dict }: { dict?: Dictionary['feature_grid'
                                     <feature.icon className="h-6 w-6" aria-hidden="true" />
                                 </div>
 
-                                <h3 className="text-xl font-bold text-ros-gray-dark mb-3 group-hover:text-ros-blue transition-colors">
+                                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-ros-blue transition-colors">
                                     {feature.name}
                                 </h3>
 
@@ -86,7 +86,7 @@ export default function FeatureGrid({ dict }: { dict?: Dictionary['feature_grid'
                                 </p>
 
                                 <div className="flex items-center justify-between mt-auto pt-6 border-t border-gray-100">
-                                    <span className="text-sm font-semibold text-ros-gray-medium">{feature.stat}</span>
+                                    <span className="text-sm font-semibold text-gray-500">{feature.stat}</span>
                                     <span className="text-ros-blue opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0 transition-all duration-300">
                                         <ArrowUpRight className="h-5 w-5" />
                                     </span>

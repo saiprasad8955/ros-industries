@@ -3,6 +3,8 @@ import { Settings, Gauge, Droplet, Filter, Wind } from 'lucide-react';
 import ContactButton from '@/components/ContactButton';
 import Link from 'next/link';
 
+import Image from 'next/image';
+
 export default async function TankAccessoriesPage({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
     const dict = await getDictionary(lang);
@@ -20,19 +22,30 @@ export default async function TankAccessoriesPage({ params }: { params: Promise<
     return (
         <div className="bg-ros-gray-light min-h-screen">
             {/* Header */}
-            <section className="bg-ros-gray-dark text-white py-24 relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-30"></div>
-                <div className="container-custom relative z-10">
-                    <div className="inline-flex items-center gap-2 mb-4 text-ros-blue font-semibold uppercase tracking-wider text-xs bg-white/5 py-1 px-3 rounded-full border border-white/10 backdrop-blur-md">
-                        <Settings className="w-4 h-4" />
-                        <span>Hydraulic Components</span>
+            <section className="bg-ros-gray-dark text-white py-32 relative overflow-hidden">
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src="/tank-accessories-bg.png"
+                        alt="Hydraulic Tank Accessories"
+                        fill
+                        className="object-cover opacity-80 mix-blend-overlay"
+                        priority
+                    />
+                    <div className="absolute inset-0 bg-ros-gray-dark/40"></div>
+                </div>
+                <div className="container-custom relative z-10 flex justify-center">
+                    <div className="text-center max-w-4xl mx-auto bg-ros-gray-dark/90 backdrop-blur-xl p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-white/10">
+                        <div className="inline-flex items-center gap-2 mb-6 text-ros-blue font-semibold uppercase tracking-wider text-xs bg-white/5 py-1 px-3 rounded-full border border-white/10">
+                            <Settings className="w-4 h-4" />
+                            <span>Hydraulic Components</span>
+                        </div>
+                        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 drop-shadow-lg">
+                            {t.title}
+                        </h1>
+                        <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                            {t.subtitle}
+                        </p>
                     </div>
-                    <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
-                        {t.title}
-                    </h1>
-                    <p className="text-xl text-gray-300 max-w-2xl leading-relaxed">
-                        {t.subtitle}
-                    </p>
                 </div>
             </section>
 

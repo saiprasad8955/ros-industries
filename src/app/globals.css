@@ -1,27 +1,48 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Fresh Mint & White Palette */
 
-  /* Industrial Brand Colors */
-  --ros-blue: #005691;
-  --ros-slate: #374151;
-  /* Slate Grey */
-  --ros-orange: #FF4D00;
-  /* Safety Orange */
-  --ros-red: #E20015;
-  /* Keeping legacy red for now, might replace with orange later if requested */
-  --ros-gray-dark: #1A1A1A;
-  --ros-gray-medium: #333333;
-  --ros-gray-light: #F5F7FA;
-  --ros-gray-border: #E5E7EB;
+  /* Base - Crisp White & Dark Gray */
+  --background: #ffffff;
+  /* Pure White */
+  --foreground: #1f2937;
+  /* Gray-900 */
+
+  /* Primary Brand Color - Fresh Mint */
+  --ros-blue: #0cbd9d;
+  /* Vibrant Mint */
+  --ros-blue-light: #d1fae5;
+  /* Pale Mint */
+
+  /* Accent Colors */
+  --ros-slate: #f0fdfa;
+  /* Extremely Light Mint/Gray */
+  --ros-orange: #fb923c;
+  /* Orange-400 (unchanged) */
+  --ros-red: #ef4444;
+  /* Red-500 (unchanged) */
+
+  /* Neutral Scale (Light Mode Focus) */
+  --ros-gray-dark: #f8fafc;
+  /* Slate-50 */
+  --ros-gray-medium: #64748b;
+  /* Slate-500 */
+  --ros-gray-light: #ffffff;
+  /* White */
+  --ros-gray-border: #e2e8f0;
+  /* Slate-200 */
+
+  /* Shadows (Soft & Airy) */
+  --shadow-subtle: 0 4px 6px -1px rgba(12, 189, 157, 0.1), 0 2px 4px -1px rgba(12, 189, 157, 0.06);
+  --shadow-premium: 0 10px 15px -3px rgba(12, 189, 157, 0.15), 0 4px 6px -2px rgba(12, 189, 157, 0.1);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-ros-blue: var(--ros-blue);
+  --color-ros-blue-light: var(--ros-blue-light);
   --color-ros-slate: var(--ros-slate);
   --color-ros-orange: var(--ros-orange);
   --color-ros-red: var(--ros-red);
@@ -34,9 +55,11 @@
 }
 
 @media (prefers-color-scheme: dark) {
+
+  /* Minimal override for system dark mode if needed, but prioritizing the "Mint/White" requested look as default */
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #1f2937;
   }
 }
 
@@ -63,15 +86,15 @@ body {
   }
 
   .h1-hero {
-    @apply text-4xl md:text-6xl font-bold tracking-tight text-ros-gray-dark;
+    @apply text-4xl md:text-6xl font-bold tracking-tight text-gray-900;
   }
 
   .h2-section {
-    @apply text-3xl font-bold tracking-tight text-ros-gray-dark mb-4;
+    @apply text-3xl font-bold tracking-tight text-gray-900 mb-4;
   }
 
   .btn-primary {
-    @apply bg-ros-blue text-white hover:bg-ros-gray-dark px-6 py-3 rounded-md font-semibold transition-all duration-300 shadow-lg hover:shadow-xl;
+    @apply bg-ros-blue text-white hover:bg-teal-600 hover:text-white px-6 py-3 rounded-md font-bold transition-all duration-300 shadow-lg shadow-ros-blue/20 hover:shadow-xl;
   }
 
   .btn-outline {

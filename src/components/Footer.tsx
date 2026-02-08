@@ -15,10 +15,7 @@ export default function Footer({ dict, lang, country }: { dict?: Dictionary['foo
             { name: "Fabrication", href: `${prefix}/products/fabrication` },
         ],
         focus: [
-            { name: dict.links_focus.power_packs, href: `${prefix}/products/hydraulics/power-packs` },
-            { name: dict.links_focus.filtration, href: `${prefix}/products/hydraulics/filtration-systems` },
             { name: dict.links_focus.manifolds, href: `${prefix}/products/hydraulics/manifold-blocks` },
-            { name: dict.links_focus.accumulators, href: `${prefix}/products/hydraulics/accumulators` },
         ],
         quick: [
             { name: dict.links_quick.about, href: `${prefix}/about-us` },
@@ -29,7 +26,7 @@ export default function Footer({ dict, lang, country }: { dict?: Dictionary['foo
     };
 
     return (
-        <footer className="bg-ros-gray-dark text-white" aria-labelledby="footer-heading">
+        <footer className="bg-gray-900 text-white" aria-labelledby="footer-heading">
             <h2 id="footer-heading" className="sr-only">Footer</h2>
             <div className="container-custom pt-16 pb-8">
                 <div className="xl:grid xl:grid-cols-3 xl:gap-8">
@@ -38,7 +35,7 @@ export default function Footer({ dict, lang, country }: { dict?: Dictionary['foo
                             <div className="w-8 h-8 bg-ros-blue rounded flex items-center justify-center text-white font-bold text-lg">
                                 R
                             </div>
-                            <span className="text-xl font-bold tracking-tight text-white">ROS <span className="text-ros-blue">Industries</span></span>
+                            <span className="text-xl font-bold tracking-tight text-white">ROS <span className="text-ros-blue-light">Industries</span></span>
                         </Link>
                         <p className="text-sm leading-6 text-gray-400 max-w-sm">
                             {dict.desc}
@@ -53,20 +50,24 @@ export default function Footer({ dict, lang, country }: { dict?: Dictionary['foo
                         <div className="border-t border-gray-700 pt-8 mt-8">
                             <h3 className="text-sm font-semibold text-white tracking-wider uppercase mb-4">{dict.hq_title}</h3>
                             <div className="flex items-start gap-3 text-gray-400 text-sm mb-2">
-                                <MapPin className="h-5 w-5 text-ros-blue shrink-0" />
+                                <MapPin className="h-5 w-5 text-ros-blue-light shrink-0" />
                                 <span className="whitespace-pre-line">
                                     Thane District,<br />
                                     Maharashtra, India
                                 </span>
                             </div>
-                            <div className="flex items-center gap-3 text-gray-400 text-sm mb-2 hover:text-white transition-colors cursor-pointer">
-                                <Phone className="h-5 w-5 text-ros-blue shrink-0" />
+                            <a href="tel:+91XXXXXXXXXX" className="flex items-center gap-3 text-gray-400 text-sm mb-2 hover:text-white transition-colors cursor-pointer">
+                                <Phone className="h-5 w-5 text-ros-blue-light shrink-0" />
                                 <span>+91 XXXXXXXXXX</span>
-                            </div>
-                            <div className="flex items-center gap-3 text-gray-400 text-sm hover:text-white transition-colors cursor-pointer">
-                                <Mail className="h-5 w-5 text-ros-blue shrink-0" />
-                                <span>contact@ros-industries.com</span>
-                            </div>
+                            </a>
+                            <a href="mailto:info.rosindustries@gmail.com" className="flex items-center gap-3 text-gray-400 mb-2 text-sm hover:text-white transition-colors cursor-pointer">
+                                <Mail className="h-5 w-5 text-ros-blue-light shrink-0" />
+                                <span>info.rosindustries@gmail.com</span>
+                            </a>
+                            <a href="mailto:sales@rosindustries.in" className="flex items-center gap-3 text-gray-400 text-sm hover:text-white transition-colors cursor-pointer">
+                                <Mail className="h-5 w-5 text-ros-blue-light shrink-0" />
+                                <span>sales@rosindustries.in</span>
+                            </a>
                         </div>
                     </div>
 

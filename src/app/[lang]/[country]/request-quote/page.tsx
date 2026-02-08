@@ -83,17 +83,17 @@ export default function RequestQuotePage() {
     return (
         <div className="bg-white min-h-screen">
             {/* Header */}
-            <section className="bg-ros-gray-dark text-white py-20 relative overflow-hidden">
-                <div className="absolute inset-0 z-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] shadow-inner"></div>
+            <section className="bg-white text-gray-900 py-20 relative overflow-hidden">
+                <div className="absolute inset-0 z-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] shadow-inner"></div>
                 <div className="container-custom relative z-10">
                     <div className="max-w-3xl">
-                        <span className="inline-block py-1 px-3 rounded-md bg-ros-blue/20 border border-ros-blue/30 text-ros-blue text-xs font-bold uppercase tracking-wider mb-6">
+                        <span className="inline-block py-1 px-3 rounded-md bg-ros-blue/10 border border-ros-blue/20 text-ros-blue text-xs font-bold uppercase tracking-wider mb-6">
                             Tailored Solutions
                         </span>
-                        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
-                            Request a <span className="text-ros-blue">Custom Quote</span>
+                        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-gray-900">
+                            Request a <span className="text-transparent bg-clip-text bg-gradient-to-r from-ros-blue to-teal-500">Custom Quote</span>
                         </h1>
-                        <p className="text-xl text-gray-300 leading-relaxed">
+                        <p className="text-xl text-gray-600 leading-relaxed">
                             Share your project requirements with us. Whether it's a standard component or a complex hydraulic system, our engineers are ready to build the perfect solution for you.
                         </p>
                     </div>
@@ -105,7 +105,7 @@ export default function RequestQuotePage() {
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                         {/* Info Column */}
                         <div className="space-y-8">
-                            <div className="bg-ros-gray-light p-8 rounded-3xl border border-gray-100">
+                            <div className="bg-ros-gray-dark p-8 rounded-3xl border border-gray-100 shadow-sm">
                                 <h3 className="text-xl font-bold text-gray-900 mb-6">Why Partner With ROS?</h3>
                                 <div className="space-y-6">
                                     <div className="flex gap-4">
@@ -138,7 +138,7 @@ export default function RequestQuotePage() {
                                 </div>
                             </div>
 
-                            <div className="p-8 border border-gray-100 rounded-3xl">
+                            <div className="p-8 border border-gray-100 rounded-3xl bg-white shadow-sm">
                                 <p className="text-sm text-gray-400 mb-4 font-bold uppercase tracking-widest text-center">Trusted By Global Giants</p>
                                 <div className="grid grid-cols-2 gap-4 opacity-30 grayscale">
                                     {/* Placeholders for client logos */}
@@ -155,7 +155,7 @@ export default function RequestQuotePage() {
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                className="bg-white p-8 md:p-12 rounded-3xl shadow-2xl shadow-gray-200/50 border border-gray-100"
+                                className="bg-white p-8 md:p-12 rounded-3xl shadow-xl shadow-ros-blue/5 border border-gray-100"
                             >
                                 <form onSubmit={handleSubmit} className="space-y-8">
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -168,7 +168,7 @@ export default function RequestQuotePage() {
                                                     type="text"
                                                     value={formData.name}
                                                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                                    className={`w-full pl-12 pr-4 py-4 bg-gray-50 border ${errors.name ? 'border-red-300' : 'border-gray-100'} rounded-2xl focus:border-ros-blue focus:ring-4 focus:ring-ros-blue/5 outline-none transition-all`}
+                                                    className={`w-full pl-12 pr-4 py-4 bg-gray-50 border ${errors.name ? 'border-red-500' : 'border-gray-200'} rounded-2xl focus:border-ros-blue focus:ring-1 focus:ring-ros-blue text-gray-900 outline-none transition-all placeholder:text-gray-400`}
                                                     placeholder="John Doe"
                                                 />
                                             </div>
@@ -183,7 +183,7 @@ export default function RequestQuotePage() {
                                                     type="email"
                                                     value={formData.email}
                                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                                    className={`w-full pl-12 pr-4 py-4 bg-gray-50 border ${errors.email ? 'border-red-300' : 'border-gray-100'} rounded-2xl focus:border-ros-blue focus:ring-4 focus:ring-ros-blue/5 outline-none transition-all`}
+                                                    className={`w-full pl-12 pr-4 py-4 bg-gray-50 border ${errors.email ? 'border-red-500' : 'border-gray-200'} rounded-2xl focus:border-ros-blue focus:ring-1 focus:ring-ros-blue text-gray-900 outline-none transition-all placeholder:text-gray-400`}
                                                     placeholder="john@company.com"
                                                 />
                                             </div>
@@ -200,7 +200,7 @@ export default function RequestQuotePage() {
                                                     type="tel"
                                                     value={formData.phone}
                                                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                                                    className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:border-ros-blue focus:ring-4 focus:ring-ros-blue/5 outline-none transition-all"
+                                                    className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:border-ros-blue focus:ring-1 focus:ring-ros-blue text-gray-900 outline-none transition-all placeholder:text-gray-400"
                                                     placeholder="+91..."
                                                 />
                                             </div>
@@ -213,7 +213,7 @@ export default function RequestQuotePage() {
                                                     type="text"
                                                     value={formData.company}
                                                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                                                    className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:border-ros-blue focus:ring-4 focus:ring-ros-blue/5 outline-none transition-all"
+                                                    className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-200 rounded-2xl focus:border-ros-blue focus:ring-1 focus:ring-ros-blue text-gray-900 outline-none transition-all placeholder:text-gray-400"
                                                     placeholder="Company Ltd"
                                                 />
                                             </div>
@@ -226,7 +226,7 @@ export default function RequestQuotePage() {
                                             required
                                             value={formData.message}
                                             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                            className={`w-full p-6 bg-gray-50 border ${errors.message ? 'border-red-300' : 'border-gray-100'} rounded-3xl focus:border-ros-blue focus:ring-4 focus:ring-ros-blue/5 outline-none transition-all min-h-[200px]`}
+                                            className={`w-full p-6 bg-gray-50 border ${errors.message ? 'border-red-500' : 'border-gray-200'} rounded-3xl focus:border-ros-blue focus:ring-1 focus:ring-ros-blue text-gray-900 outline-none transition-all min-h-[200px] placeholder:text-gray-400`}
                                             placeholder="Tell us about your technical requirements, volumes, and timelines..."
                                         />
                                         {errors.message && <p className="text-xs text-red-500 mt-1">{errors.message[0]}</p>}
@@ -234,7 +234,7 @@ export default function RequestQuotePage() {
 
                                     <button
                                         disabled={status === 'loading'}
-                                        className="w-full bg-ros-blue text-white py-5 rounded-2xl font-bold text-lg flex items-center justify-center gap-3 hover:bg-blue-700 transition-all shadow-xl shadow-ros-blue/20 disabled:opacity-50 active:scale-[0.98]"
+                                        className="w-full bg-ros-blue text-white py-5 rounded-2xl font-bold text-lg flex items-center justify-center gap-3 hover:bg-teal-600 transition-all shadow-xl shadow-ros-blue/20 disabled:opacity-50 active:scale-[0.98]"
                                     >
                                         {status === 'loading' ? (
                                             <>

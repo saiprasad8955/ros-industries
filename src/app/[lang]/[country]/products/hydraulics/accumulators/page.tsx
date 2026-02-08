@@ -1,6 +1,8 @@
 import { getDictionary } from '@/app/utils/get-dictionary';
 import { Battery, CheckCircle2, Plus, ArrowRight } from 'lucide-react';
 
+import Image from 'next/image';
+
 export default async function AccumulatorsPage({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
     const dict = await getDictionary(lang);
@@ -9,22 +11,29 @@ export default async function AccumulatorsPage({ params }: { params: Promise<{ l
     return (
         <div className="bg-ros-gray-light min-h-screen">
             {/* Header */}
-            <section className="bg-ros-gray-dark text-white py-24 relative overflow-hidden">
+            <section className="relative overflow-hidden py-32">
                 <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/diagmonds-light.png')] opacity-10"></div>
-                    <div className="absolute -left-20 bottom-0 w-96 h-96 bg-ros-blue/20 rounded-full blur-3xl"></div>
+                    <Image
+                        src="/accumulators-bg.png"
+                        alt="Hydraulic Accumulators"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                    <div className="absolute inset-0 bg-black/10"></div>
                 </div>
-                <div className="container-custom relative z-10">
-                    <div className="flex items-center gap-2 mb-4 text-ros-blue font-semibold uppercase tracking-wider text-xs">
-                        <Battery className="w-4 h-4 rotate-90" />
-                        <span>Energy Storage</span>
+                <div className="container-custom relative z-10 flex justify-center">
+                    <div className="text-center max-w-4xl mx-auto bg-white/80 p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-white/50">
+                        <span className="inline-block py-1 px-3 rounded-md bg-ros-blue/10 border border-ros-blue/20 text-ros-blue text-xs font-bold uppercase tracking-wider mb-6">
+                            Energy Storage
+                        </span>
+                        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 text-gray-900 drop-shadow-sm">
+                            {t.title}
+                        </h1>
+                        <p className="text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed font-medium">
+                            {t.subtitle}
+                        </p>
                     </div>
-                    <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
-                        {t.title}
-                    </h1>
-                    <p className="text-xl text-gray-300 max-w-2xl leading-relaxed">
-                        {t.subtitle}
-                    </p>
                 </div>
             </section>
 

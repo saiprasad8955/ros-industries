@@ -28,8 +28,8 @@ export default function AboutView({ dict }: { dict?: Dictionary['about'] }) {
         <section className="relative min-h-screen bg-ros-gray-dark overflow-hidden">
             {/* Background Gradients */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-ros-blue/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
-                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-ros-blue/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-ros-blue/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 opacity-70" />
+                <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-ros-blue/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2 opacity-60" />
             </div>
 
             <div className="container-custom relative z-10 py-16 md:py-24">
@@ -44,9 +44,9 @@ export default function AboutView({ dict }: { dict?: Dictionary['about'] }) {
                         {/* Logo Abstract Representation */}
                         <div className="absolute inset-0 border-2 border-ros-blue rounded-lg rotate-45 transform origin-center" />
                         <div className="absolute inset-2 bg-ros-blue rounded-lg opacity-80" />
-                        <div className="absolute -inset-1 border border-white/20 rounded-xl rotate-12" />
+                        <div className="absolute -inset-1 border border-gray-200 rounded-xl rotate-12" />
                     </div>
-                    <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight">
+                    <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 tracking-tight">
                         {t.title_prefix} <span className="text-ros-blue">{t.title_main}</span>
                     </h1>
                 </motion.div>
@@ -60,7 +60,7 @@ export default function AboutView({ dict }: { dict?: Dictionary['about'] }) {
                         className="space-y-8"
                     >
                         <motion.div variants={fadeIn}>
-                            <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+                            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
                                 ROS Industries
                             </h2>
                             <p className="text-xl md:text-2xl text-ros-blue font-serif italic mt-2">
@@ -68,9 +68,9 @@ export default function AboutView({ dict }: { dict?: Dictionary['about'] }) {
                             </p>
                         </motion.div>
 
-                        <motion.div variants={fadeIn} className="space-y-6 text-gray-300 text-lg leading-relaxed">
+                        <motion.div variants={fadeIn} className="space-y-6 text-gray-600 text-lg leading-relaxed">
                             <p className="border-l-4 border-ros-blue pl-4">
-                                {t.intro_loc} <span className="text-white font-semibold">{t.intro_loc_highlight}</span>.
+                                {t.intro_loc} <span className="text-gray-900 font-semibold">{t.intro_loc_highlight}</span>.
                             </p>
 
                             <p>
@@ -81,19 +81,19 @@ export default function AboutView({ dict }: { dict?: Dictionary['about'] }) {
                                 {t.intro_p2}
                             </p>
 
-                            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
-                                <h3 className="text-white font-semibold mb-3 flex items-center gap-2">
+                            <div className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+                                <h3 className="text-gray-900 font-semibold mb-3 flex items-center gap-2">
                                     <Settings className="w-5 h-5 text-ros-blue" />
                                     {t.mfg_title}
                                 </h3>
                                 <p className="text-sm md:text-base">
-                                    {t.mfg_p1} <span className="text-ros-blue font-bold">{t.mfg_p1_highlight1}</span>{t.mfg_p1_part2} <span className="text-white">{t.mfg_p1_highlight2}</span> {t.mfg_p1_part3}
+                                    {t.mfg_p1} <span className="text-ros-blue font-bold">{t.mfg_p1_highlight1}</span>{t.mfg_p1_part2} <span className="text-gray-800">{t.mfg_p1_highlight2}</span> {t.mfg_p1_part3}
                                 </p>
                             </div>
                         </motion.div>
 
                         <motion.div variants={fadeIn}>
-                            <button className="btn-primary flex items-center gap-2 group">
+                            <button className="btn-primary flex items-center gap-2 group shadow-lg shadow-ros-blue/20">
                                 {t.learn_more}
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </button>
@@ -107,9 +107,9 @@ export default function AboutView({ dict }: { dict?: Dictionary['about'] }) {
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
                             transition={{ delay: 0.2, duration: 0.6 }}
-                            className="col-span-2 row-span-2 relative rounded-3xl overflow-hidden border border-white/10 group shadow-[0_0_50px_rgba(0,86,145,0.2)]"
+                            className="col-span-2 row-span-2 relative rounded-3xl overflow-hidden border border-gray-100 group shadow-lg shadow-gray-100"
                         >
-                            <div className="absolute inset-0 bg-gray-800 flex items-center justify-center text-gray-500">
+                            <div className="absolute inset-0 bg-gray-50 flex items-center justify-center text-gray-300">
                                 {/* Fallback/Placeholder if image missing */}
                                 <Factory className="w-16 h-16 opacity-20" />
                             </div>
@@ -117,15 +117,15 @@ export default function AboutView({ dict }: { dict?: Dictionary['about'] }) {
                                 src="/about/robotics.png"
                                 alt="Industrial Automation"
                                 fill
-                                className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-60 mix-blend-overlay hover:opacity-80"
+                                className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-60 mix-blend-multiply hover:opacity-80"
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/20 to-transparent" />
                             <div className="absolute bottom-6 left-6 right-6">
-                                <div className="bg-white/10 backdrop-blur-md p-3 rounded-xl inline-flex mb-2 border border-white/20">
-                                    <Globe2 className="w-6 h-6 text-white" />
+                                <div className="bg-white/80 backdrop-blur-md p-3 rounded-xl inline-flex mb-2 border border-white shadow-sm">
+                                    <Globe2 className="w-6 h-6 text-ros-blue" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-white mb-1">{t.card_industrial}</h3>
-                                <p className="text-gray-300 text-sm">{t.card_industrial_desc}</p>
+                                <h3 className="text-2xl font-bold text-gray-900 mb-1">{t.card_industrial}</h3>
+                                <p className="text-gray-600 text-sm">{t.card_industrial_desc}</p>
                             </div>
                         </motion.div>
 
@@ -134,14 +134,14 @@ export default function AboutView({ dict }: { dict?: Dictionary['about'] }) {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.4, duration: 0.6 }}
-                            className="col-span-2 md:col-span-1 relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl overflow-hidden border border-white/10 group p-6 flex flex-col justify-between hover:border-ros-blue/50 transition-colors"
+                            className="col-span-2 md:col-span-1 relative bg-white rounded-3xl overflow-hidden border border-gray-100 group p-6 flex flex-col justify-between hover:border-ros-blue/50 transition-colors shadow-sm"
                         >
-                            <div className="w-12 h-12 bg-ros-blue/20 rounded-full flex items-center justify-center mb-4 group-hover:bg-ros-blue transition-colors duration-300">
+                            <div className="w-12 h-12 bg-ros-blue/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-ros-blue transition-colors duration-300">
                                 <Factory className="w-6 h-6 text-ros-blue group-hover:text-white" />
                             </div>
                             <div>
-                                <h3 className="text-lg font-bold text-white mb-2">{t.card_shed}</h3>
-                                <p className="text-xs text-gray-400">{t.card_shed_desc}</p>
+                                <h3 className="text-lg font-bold text-gray-900 mb-2">{t.card_shed}</h3>
+                                <p className="text-xs text-gray-500">{t.card_shed_desc}</p>
                             </div>
                         </motion.div>
 
@@ -150,14 +150,14 @@ export default function AboutView({ dict }: { dict?: Dictionary['about'] }) {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.6, duration: 0.6 }}
-                            className="col-span-2 md:col-span-1 relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl overflow-hidden border border-white/10 group p-6 flex flex-col justify-between hover:border-ros-orange/50 transition-colors"
+                            className="col-span-2 md:col-span-1 relative bg-white rounded-3xl overflow-hidden border border-gray-100 group p-6 flex flex-col justify-between hover:border-ros-orange/50 transition-colors shadow-sm"
                         >
-                            <div className="w-12 h-12 bg-ros-orange/20 rounded-full flex items-center justify-center mb-4 group-hover:bg-ros-orange transition-colors duration-300">
+                            <div className="w-12 h-12 bg-ros-orange/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-ros-orange transition-colors duration-300">
                                 <Users className="w-6 h-6 text-ros-orange group-hover:text-white" />
                             </div>
                             <div>
-                                <h3 className="text-lg font-bold text-white mb-2">{t.card_services}</h3>
-                                <p className="text-xs text-gray-400">{t.card_services_desc}</p>
+                                <h3 className="text-lg font-bold text-gray-900 mb-2">{t.card_services}</h3>
+                                <p className="text-xs text-gray-500">{t.card_services_desc}</p>
                             </div>
                         </motion.div>
                     </div>

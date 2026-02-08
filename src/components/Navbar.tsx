@@ -66,8 +66,8 @@ export default function Navbar({ dict, lang, country }: { dict?: Dictionary['nav
   return (
     <header
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${scrolled
-        ? 'bg-white/80 backdrop-blur-lg border-b border-gray-200/50 shadow-sm py-2'
-        : 'bg-ros-gray-dark border-b border-white/10 py-4'
+        ? 'bg-white/90 backdrop-blur-lg border-b border-gray-200 shadow-sm py-2'
+        : 'bg-transparent border-b border-white/20 py-4'
         }`}
     >
       <nav className="container-custom flex items-center justify-between" aria-label="Global">
@@ -77,8 +77,8 @@ export default function Navbar({ dict, lang, country }: { dict?: Dictionary['nav
               R
             </div>
             <div className="flex flex-col -space-y-1">
-              <span className={`text-xl font-bold tracking-tight transition-colors duration-300 ${scrolled ? 'text-gray-900' : 'text-white'}`}>ROS</span>
-              <span className={`text-xs font-medium uppercase tracking-widest ${scrolled ? 'text-ros-blue' : 'text-gray-400'}`}>Industries</span>
+              <span className={`text-xl font-bold tracking-tight transition-colors duration-300 ${scrolled ? 'text-gray-900' : 'text-gray-900'}`}>ROS</span>
+              <span className={`text-xs font-medium uppercase tracking-widest ${scrolled ? 'text-ros-blue' : 'text-gray-600'}`}>Industries</span>
             </div>
           </Link>
         </div>
@@ -89,7 +89,7 @@ export default function Navbar({ dict, lang, country }: { dict?: Dictionary['nav
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Open main menu</span>
-            <Menu className={`h-6 w-6 ${scrolled ? 'text-gray-700' : 'text-white'}`} aria-hidden="true" />
+            <Menu className="h-6 w-6 text-gray-900" aria-hidden="true" />
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-8 items-center h-full">
@@ -103,8 +103,8 @@ export default function Navbar({ dict, lang, country }: { dict?: Dictionary['nav
               <Link
                 href={item.href}
                 className={`group flex items-center gap-1 py-2 text-sm font-medium transition-colors duration-200 ${isActive(item.href)
-                  ? (scrolled ? 'text-ros-blue' : 'text-white')
-                  : (scrolled ? 'text-gray-600 hover:text-ros-blue' : 'text-gray-300 hover:text-white')
+                  ? 'text-ros-blue'
+                  : scrolled ? 'text-gray-600 hover:text-ros-blue' : 'text-gray-700 hover:text-ros-blue'
                   }`}
               >
                 {item.name}
@@ -121,7 +121,7 @@ export default function Navbar({ dict, lang, country }: { dict?: Dictionary['nav
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 10, scale: 0.98 }}
                     transition={{ duration: 0.2, ease: "easeOut" }}
-                    className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-gray-900/5 border border-gray-100"
+                    className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-72 overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-gray-900/5 border border-gray-100"
                   >
                     <div className="p-2">
                       {item.children.map((child) => (
@@ -131,7 +131,7 @@ export default function Navbar({ dict, lang, country }: { dict?: Dictionary['nav
                           className="group/item flex items-start gap-4 rounded-xl p-3 hover:bg-gray-50 transition-all duration-200 border border-transparent hover:border-gray-100 hover:shadow-sm"
                         >
                           {child.icon ? (
-                            <div className="mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-ros-blue/5 text-ros-blue group-hover/item:bg-ros-blue group-hover/item:text-white transition-colors duration-200">
+                            <div className="mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-lg bg-ros-blue/10 text-ros-blue group-hover/item:bg-ros-blue group-hover/item:text-white transition-colors duration-200">
                               <child.icon className="h-5 w-5" aria-hidden="true" />
                             </div>
                           ) : null}
@@ -152,19 +152,19 @@ export default function Navbar({ dict, lang, country }: { dict?: Dictionary['nav
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-4">
           <RegionSelector lang={lang} country={country} />
-          <div className={`h-6 w-px ${scrolled ? 'bg-gray-300/50' : 'bg-white/20'}`}></div>
-          <Link href="#contact" className={`p-2 transition-all duration-200 rounded-full ${scrolled ? 'text-gray-500 hover:text-ros-blue hover:bg-blue-50' : 'text-gray-300 hover:text-white hover:bg-white/10'}`} title={dict.login}>
+          <div className="h-6 w-px bg-gray-300"></div>
+          <Link href="#contact" className="p-2 transition-all duration-200 rounded-full text-gray-500 hover:text-ros-blue hover:bg-gray-100" title={dict.login}>
             <User className="h-5 w-5" />
             <span className="sr-only">{dict.login}</span>
           </Link>
 
           <Link
             href={`/${lang || 'en'}/${country || 'us'}/request-quote`}
-            className="group relative inline-flex items-center justify-center gap-4 overflow-hidden rounded-full bg-ros-blue px-6 py-2.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:bg-ros-blue/90 hover:scale-105 hover:shadow-ros-blue/25"
+            className="group relative inline-flex items-center justify-center gap-4 overflow-hidden rounded-full bg-ros-blue px-6 py-2.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:bg-teal-600 hover:scale-105 hover:shadow-ros-blue/25"
           >
             <Phone className="h-4 w-4" />
             <span>{dict.request_quote}</span>
-            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ros-blue to-blue-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ros-blue to-teal-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
           </Link>
         </div>
       </nav >
@@ -178,7 +178,7 @@ export default function Navbar({ dict, lang, country }: { dict?: Dictionary['nav
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="lg:hidden fixed inset-0 z-[100] bg-black/20 backdrop-blur-sm"
+                className="lg:hidden fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <motion.div
@@ -186,17 +186,17 @@ export default function Navbar({ dict, lang, country }: { dict?: Dictionary['nav
                   animate={{ x: 0 }}
                   exit={{ x: '100%' }}
                   transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                  className="fixed inset-y-0 right-0 z-[101] w-full overflow-y-auto bg-white/95 backdrop-blur-xl px-6 py-6 sm:max-w-sm shadow-2xl"
+                  className="fixed inset-y-0 right-0 z-[101] w-full overflow-y-auto bg-gray-900/95 backdrop-blur-xl px-6 py-6 sm:max-w-sm shadow-2xl border-l border-white/10"
                   onClick={e => e.stopPropagation()}
                 >
                   <div className="flex items-center justify-between mb-8">
                     <Link href={`/${lang || 'en'}/${country || 'us'}`} className="-m-1.5 p-1.5 flex items-center gap-2">
-                      <div className="w-8 h-8 bg-ros-blue rounded-lg flex items-center justify-center text-white font-bold text-lg">R</div>
-                      <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-ros-blue to-ros-gray-dark">ROS Industries</span>
+                      <div className="w-8 h-8 bg-ros-blue rounded-lg flex items-center justify-center text-black font-bold text-lg">R</div>
+                      <span className="text-xl font-bold text-white">ROS Industries</span>
                     </Link>
                     <button
                       type="button"
-                      className="-m-2.5 rounded-md p-2.5 text-gray-700 hover:bg-gray-100 transition-colors"
+                      className="-m-2.5 rounded-md p-2.5 text-gray-400 hover:bg-white/10 transition-colors"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       <span className="sr-only">Close menu</span>
@@ -204,24 +204,24 @@ export default function Navbar({ dict, lang, country }: { dict?: Dictionary['nav
                     </button>
                   </div>
                   <div className="mt-6 flow-root">
-                    <div className="-my-6 divide-y divide-gray-100">
+                    <div className="-my-6 divide-y divide-white/10">
                       <div className="space-y-2 py-6">
                         {navigation.map((item) => (
                           <div key={item.name} className="py-2">
                             <Link
                               href={item.href}
-                              className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-blue-50 hover:text-ros-blue transition-colors ${isActive(item.href) ? 'text-ros-blue' : 'text-gray-900'}`}
+                              className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-white/5 hover:text-ros-blue transition-colors ${isActive(item.href) ? 'text-ros-blue' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               {item.name}
                             </Link>
                             {item.children && (
-                              <div className="pl-4 border-l-2 border-primary/10 ml-2 space-y-1 mt-1">
+                              <div className="pl-4 border-l-2 border-ros-blue/20 ml-2 space-y-1 mt-1">
                                 {item.children.map((child) => (
                                   <Link
                                     key={child.name}
                                     href={child.href}
-                                    className="block rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-ros-blue transition-colors"
+                                    className="block rounded-md px-3 py-2 text-sm font-medium text-gray-400 hover:bg-white/5 hover:text-ros-blue transition-colors"
                                     onClick={() => setMobileMenuOpen(false)}
                                   >
                                     {child.name}
@@ -232,10 +232,10 @@ export default function Navbar({ dict, lang, country }: { dict?: Dictionary['nav
                           </div>
                         ))}
                       </div>
-                      <div className="py-6 border-t border-gray-100">
+                      <div className="py-6 border-t border-white/10">
                         <Link
                           href="#"
-                          className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 mb-4"
+                          className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-white/5 mb-4"
                         >
                           {dict.login}
                         </Link>

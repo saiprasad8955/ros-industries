@@ -173,7 +173,7 @@ export default function ContactButton({ dict }: { dict?: Dictionary['contact_but
                     aria-label={t.label}
                 >
                     {isOpen ? <X className="h-6 w-6" /> : <MessageSquare className="h-6 w-6" />}
-                    {!isOpen && <span className="absolute right-full mr-4 bg-ros-gray-dark text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden lg:block">Quick Inquiry</span>}
+                    {!isOpen && <span className="absolute right-full mr-4 bg-gray-900 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden lg:block">Quick Inquiry</span>}
                 </button>
             </div>
         </>

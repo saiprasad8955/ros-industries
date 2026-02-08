@@ -89,10 +89,10 @@ export default function RegionSelector({ lang, country }: { lang?: string, count
         <>
             <button
                 onClick={() => setIsOpen(true)}
-                className="flex items-center gap-2 text-sm font-semibold text-ros-gray-dark hover:text-ros-blue transition-colors group"
+                className="flex items-center gap-2 text-sm font-semibold text-gray-700 hover:text-ros-blue transition-colors group"
             >
                 <Globe className="h-5 w-5 text-gray-500 group-hover:text-ros-blue transition-colors" />
-                <span className=" text-gray-600 group-hover:text-ros-blue transition-colors">{getCurrentLabel()}</span>
+                <span className=" text-gray-700 group-hover:text-ros-blue transition-colors">{getCurrentLabel()}</span>
             </button>
 
             {mounted && isOpen && createPortal(
@@ -115,7 +115,7 @@ export default function RegionSelector({ lang, country }: { lang?: string, count
                             className="relative bg-white rounded-xl shadow-2xl max-w-4xl w-full max-h-[85vh] overflow-hidden flex flex-col md:flex-row"
                         >
                             {/* Sidebar Branding */}
-                            <div className="hidden md:flex flex-col justify-between w-64 bg-ros-gray-dark p-8 text-white shrink-0">
+                            <div className="hidden md:flex flex-col justify-between w-64 bg-gray-900 p-8 text-white shrink-0">
                                 <div>
                                     <h3 className="text-xl font-bold mb-4">Choose Region</h3>
                                     <p className="text-gray-400 text-sm">
@@ -130,8 +130,8 @@ export default function RegionSelector({ lang, country }: { lang?: string, count
                             {/* Main Content */}
                             <div className="flex-1 p-6 md:p-8 overflow-y-auto">
                                 <div className="flex justify-between items-center mb-6">
-                                    <h2 className="text-2xl font-bold text-ros-gray-dark md:hidden">Select Location</h2>
-                                    <h2 className="text-2xl font-bold text-ros-gray-dark hidden md:block">Global Presence</h2>
+                                    <h2 className="text-2xl font-bold text-gray-900 md:hidden">Select Location</h2>
+                                    <h2 className="text-2xl font-bold text-gray-900 hidden md:block">Global Presence</h2>
                                     <button onClick={() => setIsOpen(false)} className="p-2 hover:bg-gray-100 rounded-full transition-colors">
                                         <X className="h-6 w-6 text-gray-500" />
                                     </button>
@@ -146,7 +146,7 @@ export default function RegionSelector({ lang, country }: { lang?: string, count
                                             <ul className="space-y-3">
                                                 {region.countries.map((country) => (
                                                     <li key={country.name} className="group">
-                                                        <div className="font-medium text-ros-gray-dark mb-1">{country.name}</div>
+                                                        <div className="font-medium text-gray-900 mb-1">{country.name}</div>
                                                         <div className="flex flex-wrap gap-2">
                                                             {country.languages.map((lang) => {
                                                                 const isActive = currentCountry === country.code && currentLang === lang.code;
