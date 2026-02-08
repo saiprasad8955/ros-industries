@@ -14,7 +14,7 @@ export default async function PneumaticAutomationPage({ params }: { params: Prom
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                         <div>
                             <span className="text-ros-orange font-bold uppercase tracking-widest text-xs mb-4 block">Smart Pneumatics</span>
-                            <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-8 leading-tight text-ros-blue">
+                            <h1 className="text-4xl text-ros-blue md:text-6xl font-extrabold mb-6 tracking-tight">
                                 {t.title}
                             </h1>
                             <p className="text-xl text-gray-600 mb-10 font-medium leading-relaxed">
@@ -31,7 +31,7 @@ export default async function PneumaticAutomationPage({ params }: { params: Prom
                                 ))}
                             </div>
                         </div>
-                        <div className="relative aspect-[4/3] rounded-[3rem] overflow-hidden shadow-2xl ring-8 ring-white/50">
+                        <div className="md:w-1/2 relative min-h-[400px] md:min-h-[500px] aspect-4/3">
                             <Image
                                 src="/pneumatic-automation-panel.png"
                                 alt="Pneumatic Control Panel"
@@ -39,7 +39,6 @@ export default async function PneumaticAutomationPage({ params }: { params: Prom
                                 className="object-cover hover:scale-105 transition-transform duration-700"
                                 priority
                             />
-                            <div className="absolute inset-0 bg-ros-blue/10 mix-blend-multiply pointer-events-none" />
                         </div>
                     </div>
                 </div>

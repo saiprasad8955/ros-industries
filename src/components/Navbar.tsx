@@ -159,7 +159,7 @@ export default function Navbar({ dict, lang, country }: { dict?: Dictionary['nav
           >
             <Phone className="h-4 w-4" />
             <span>{dict.request_quote}</span>
-            <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ros-blue to-teal-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            <div className="absolute inset-0 -z-10 bg-linear-to-r from-ros-blue to-teal-400 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
           </Link>
         </div>
       </nav >
@@ -173,7 +173,7 @@ export default function Navbar({ dict, lang, country }: { dict?: Dictionary['nav
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="lg:hidden fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm"
+                className="lg:hidden fixed inset-0 z-100 bg-black/50 backdrop-blur-sm"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <motion.div
@@ -181,7 +181,7 @@ export default function Navbar({ dict, lang, country }: { dict?: Dictionary['nav
                   animate={{ x: 0 }}
                   exit={{ x: '100%' }}
                   transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                  className="fixed inset-y-0 right-0 z-[101] w-full overflow-y-auto bg-gray-900/95 backdrop-blur-xl px-6 py-6 sm:max-w-sm shadow-2xl border-l border-white/10"
+                  className="fixed inset-y-0 right-0 z-101 w-full overflow-y-auto bg-gray-900/95 backdrop-blur-xl px-6 py-6 sm:max-w-sm shadow-2xl border-l border-white/10"
                   onClick={e => e.stopPropagation()}
                 >
                   <div className="flex items-center justify-between mb-8">

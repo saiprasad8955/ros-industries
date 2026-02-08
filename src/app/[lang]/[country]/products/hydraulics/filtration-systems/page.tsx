@@ -58,7 +58,7 @@ export default async function FiltrationPage({ params }: { params: Promise<{ lan
                     </div>
 
                     <div className="lg:w-1/2 order-1 lg:order-2 w-full">
-                        <div className="bg-linear-to-br from-gray-50 to-gray-100 rounded-2xl aspect-[4/3] w-full flex items-center justify-center relative overflow-hidden shadow-inner group">
+                        <div className="bg-linear-to-br from-gray-50 to-gray-100 rounded-2xl aspect-4/3 w-full flex items-center justify-center relative overflow-hidden shadow-inner group">
                             {/* Filtration Image */}
                             <Image
                                 src="/filtration-trolley.png"

@@ -15,7 +15,7 @@ export default async function PneumaticCylindersPage({ params }: { params: Promi
                     <div className="flex flex-col lg:flex-row gap-16 items-center">
                         <div className="lg:w-1/2">
                             <span className="text-ros-orange font-bold uppercase tracking-widest text-xs mb-4 block">Precision Actuation</span>
-                            <h1 className="text-4xl text-ros-blue md:text-6xl font-extrabold text-gray-900 mb-6 tracking-tight">
+                            <h1 className="text-4xl text-ros-blue md:text-6xl font-extrabold mb-6 tracking-tight">
                                 {t.title}
                             </h1>
                             <p className="text-xl text-gray-600 leading-relaxed font-medium mb-10">

@@ -23,7 +23,7 @@ export default async function PneumaticManifoldsPage({ params }: { params: Promi
                         </div>
                         <div>
                             <span className="text-ros-orange font-bold uppercase tracking-widest text-xs mb-4 block">Centralized Distribution</span>
-                            <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-8 leading-tight text-ros-blue">
+                            <h1 className="text-4xl text-ros-blue md:text-6xl font-extrabold mb-8 leading-tight">
                                 {t.title}
                             </h1>
                             <p className="text-xl text-gray-600 mb-10 font-medium">
