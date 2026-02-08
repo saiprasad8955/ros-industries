@@ -21,7 +21,7 @@ export default async function ClampsFittingsPage({ params }: { params: Promise<{
                         sizes="100vw"
                         priority
                     />
-                    <div className="absolute inset-0 bg-ros-gray-dark/40"></div>
+                    <div className="absolute inset-0"></div>
                 </div>
                 <div className="container-custom relative z-10 flex justify-center">
                     <div className="text-center max-w-4xl mx-auto bg-ros-gray-dark/90 backdrop-blur-xl p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-white/10">
@@ -29,10 +29,10 @@ export default async function ClampsFittingsPage({ params }: { params: Promise<{
                             <Wrench className="w-4 h-4" />
                             <span>Connection Technology</span>
                         </div>
-                        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 drop-shadow-lg">
+                        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 text-gray-900 drop-shadow-sm">
                             {t.title}
                         </h1>
-                        <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed font-medium">
                             {t.subtitle}
                         </p>
                     </div>
@@ -73,17 +73,33 @@ export default async function ClampsFittingsPage({ params }: { params: Promise<{
                             </div>
                         </div>
                     </div>
-                    <div className="order-1 md:order-2 h-80 bg-gray-200 rounded-3xl flex items-center justify-center text-gray-400 relative overflow-hidden">
-                        {/* Placeholder for Hoses Image (Image 2 - Top/Side) */}
-                        <span className="text-lg font-medium">Hydraulic Hoses Image</span>
+                    <div className="order-1 md:order-2 h-80 bg-gray-200 rounded-3xl flex items-center justify-center text-gray-400 relative overflow-hidden group shadow-inner border border-gray-300">
+                        {/* Reusing pneumatic hoses image as strictly visual representation */}
+                        <Image
+                            src="/pneumatic-hoses-hero.png"
+                            alt="Industrial Hoses"
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-ros-blue/10 mix-blend-multiply group-hover:bg-transparent transition-colors duration-500" />
                     </div>
                 </div>
 
                 {/* Accessories / Clamps Section */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div className="h-80 bg-gray-200 rounded-3xl flex items-center justify-center text-gray-400 relative overflow-hidden">
-                        {/* Placeholder for Clamps Image (Image 2 - Bottom) */}
-                        <span className="text-lg font-medium">Clamps & Fittings Image</span>
+                    <div className="h-80 bg-gray-200 rounded-3xl flex items-center justify-center text-gray-400 relative overflow-hidden group shadow-inner border border-gray-300">
+                        {/* Since image generation failed, using a styled placeholder or reusing bg */}
+                        <Image
+                            src="/clamps-fittings-bg.png"
+                            alt="Clamps and Fittings Detail"
+                            fill
+                            className="object-cover group-hover:scale-105 transition-transform duration-700 blur-sm group-hover:blur-0"
+                        />
+                        <div className="absolute inset-0 bg-ros-gray-dark/20 flex items-center justify-center backdrop-blur-sm group-hover:backdrop-blur-none transition-all duration-500">
+                            <div className="bg-white/90 p-4 rounded-xl shadow-lg">
+                                <Wrench className="w-8 h-8 text-ros-orange" />
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <div className="bg-white p-8 rounded-3xl shadow-lg border border-gray-100">

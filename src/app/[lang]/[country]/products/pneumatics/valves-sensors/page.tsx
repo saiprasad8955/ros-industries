@@ -14,7 +14,7 @@ export default async function ValvesSensorsPage({ params }: { params: Promise<{ 
                 <div className="w-full lg:w-1/2 flex items-center justify-center p-12 bg-ros-gray-dark text-white pt-32">
                     <div className="max-w-xl">
                         <span className="text-ros-orange font-bold uppercase tracking-[0.2em] text-xs mb-6 block">The Brain of Automation</span>
-                        <h1 className="text-5xl md:text-7xl font-extrabold mb-8 tracking-tighter">
+                        <h1 className="text-5xl  text-ros-blue md:text-7xl font-extrabold mb-8 tracking-tighter">
                             {t.title}
                         </h1>
                         <p className="text-xl text-gray-400 font-medium leading-relaxed">

@@ -26,7 +26,7 @@ export default async function PneumaticsPage({ params }: { params: Promise<{ lan
                     <div className="absolute inset-0 bg-ros-blue/10 mix-blend-multiply"></div>
                 </div>
                 <div className="container-custom relative z-10 flex justify-center">
-                    <div className="text-center max-w-4xl mx-auto bg-white/80 backdrop-blur-md p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-white/50">
+                    <div className="text-center max-w-4xl mx-auto bg-white/80 p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-white/50">
                         <span className="inline-block py-1 px-3 rounded-full bg-ros-blue/10 border border-ros-blue/20 text-ros-blue text-xs font-bold uppercase tracking-wider mb-4">
                             Solutions & Automation
                         </span>

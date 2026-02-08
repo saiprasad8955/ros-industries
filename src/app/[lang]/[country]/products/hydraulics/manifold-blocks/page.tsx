@@ -1,6 +1,5 @@
 import { getDictionary } from '@/app/utils/get-dictionary';
 import { Box } from 'lucide-react';
-
 import Image from 'next/image';
 
 export default async function ManifoldsPage({ params }: { params: Promise<{ lang: string }> }) {
@@ -42,12 +41,14 @@ export default async function ManifoldsPage({ params }: { params: Promise<{ lang
                 {/* Manifolds Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {t.types.map((type: any, idx: number) => (
-                        <div key={idx} className="bg-white rounded-2xl p-2 shadow-sm border border-gray-100 hover:shadow-2xl transition-all duration-300 flex flex-col">
-                            <div className="bg-gray-100 rounded-xl aspect-square w-full mb-6 flex items-center justify-center relative overflow-hidden group">
-                                <div className="absolute inset-0 bg-ros-gray-dark/5 group-hover:bg-ros-gray-dark/0 transition-colors"></div>
-                                {/* Placeholder for Manifold Images */}
-                                <Box className="w-16 h-16 text-gray-300" />
-                                <span className="absolute bottom-4 text-xs text-gray-400 font-mono">Image {idx + 1}</span>
+                        <div key={idx} className="bg-white rounded-2xl p-2 shadow-sm border border-gray-100 hover:shadow-2xl transition-all duration-300 flex flex-col group">
+                            <div className="bg-gray-50 rounded-xl aspect-square w-full mb-6 flex items-center justify-center relative overflow-hidden">
+                                <Image
+                                    src="/manifold-block.png"
+                                    alt="Hydraulic Manifold Block"
+                                    fill
+                                    className="object-contain p-6 group-hover:scale-110 transition-transform duration-500"
+                                />
                             </div>
 
                             <div className="px-6 pb-8 flex-1">

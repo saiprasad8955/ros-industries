@@ -1,7 +1,5 @@
 import { getDictionary } from '@/app/utils/get-dictionary';
 import { Settings, Gauge, Droplet, Filter, Wind } from 'lucide-react';
-
-
 import Image from 'next/image';
 
 export default async function TankAccessoriesPage({ params }: { params: Promise<{ lang: string }> }) {
@@ -31,7 +29,7 @@ export default async function TankAccessoriesPage({ params }: { params: Promise<
                         sizes="100vw"
                         priority
                     />
-                    <div className="absolute inset-0 bg-ros-gray-dark/40"></div>
+                    <div className="absolute inset-0"></div>
                 </div>
                 <div className="container-custom relative z-10 flex justify-center">
                     <div className="text-center max-w-4xl mx-auto bg-ros-gray-dark/90 backdrop-blur-xl p-8 md:p-12 rounded-[2.5rem] shadow-2xl border border-white/10">
@@ -39,10 +37,10 @@ export default async function TankAccessoriesPage({ params }: { params: Promise<
                             <Settings className="w-4 h-4" />
                             <span>Hydraulic Components</span>
                         </div>
-                        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 drop-shadow-lg">
+                        <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 text-gray-900 drop-shadow-sm">
                             {t.title}
                         </h1>
-                        <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                        <p className="text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed font-medium">
                             {t.subtitle}
                         </p>
                     </div>
@@ -54,7 +52,7 @@ export default async function TankAccessoriesPage({ params }: { params: Promise<
 
                     {/* Content Section */}
                     <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 p-10">
-                        <h2 className="text-2xl font-bold text-ros-gray-dark mb-8 pb-4 border-b border-gray-100">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-8 pb-4 border-b border-gray-100">
                             {t.list_title}
                         </h2>
 
@@ -79,23 +77,25 @@ export default async function TankAccessoriesPage({ params }: { params: Promise<
                         </div>
                     </div>
 
-                    {/* Image Placeholder Section */}
+                    {/* Image Section */}
                     <div className="flex flex-col gap-6">
-                        <div className="bg-white p-4 rounded-2xl shadow-sm border border-gray-100 h-96 flex items-center justify-center relative overflow-hidden group">
-                            <div className="absolute inset-0 bg-gray-100 flex items-center justify-center text-gray-400">
-                                <span className="text-lg">Product Image (Reservoir Accessories)</span>
-                            </div>
-                            {/* User image placeholder based on uploaded media (Image 1) */}
+                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 h-96 flex items-center justify-center relative overflow-hidden group">
+                            <Image
+                                src="/tank-accessories-group.png"
+                                alt="Hydraulic Accessories Collection"
+                                fill
+                                className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                            />
                         </div>
                         <div className="bg-ros-gray-dark text-white p-8 rounded-2xl flex flex-col justify-center grow relative overflow-hidden">
                             <div className="absolute top-0 right-0 p-8 opacity-10">
-                                <Settings className="w-48 h-48" />
+                                <Settings className="w-48 h-48 text-black" />
                             </div>
-                            <h3 className="text-xl font-bold mb-4 relative z-10">Why Choose Our Accessories?</h3>
-                            <ul className="space-y-3 text-gray-300 relative z-10">
-                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-ros-blue rounded-full"></div>Extended Component Life</li>
-                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-ros-blue rounded-full"></div>Reduced Contamination</li>
-                                <li className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-ros-blue rounded-full"></div>Simplified Maintenance</li>
+                            <h3 className="text-xl font-bold mb-4 relative z-10 text-black">Why Choose Our Accessories?</h3>
+                            <ul className="space-y-3 relative z-10">
+                                <li className="flex items-center gap-2 font-medium text-gray-800"><div className="w-1.5 h-1.5 bg-ros-blue rounded-full"></div>Extended Component Life</li>
+                                <li className="flex items-center gap-2 font-medium text-gray-800"><div className="w-1.5 h-1.5 bg-ros-blue rounded-full"></div>Reduced Contamination</li>
+                                <li className="flex items-center gap-2 font-medium text-gray-800"><div className="w-1.5 h-1.5 bg-ros-blue rounded-full"></div>Simplified Maintenance</li>
                             </ul>
                         </div>
                     </div>

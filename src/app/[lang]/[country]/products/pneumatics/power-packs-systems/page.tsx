@@ -14,7 +14,7 @@ export default async function PowerPacksSystemsPage({ params }: { params: Promis
                     <div className="flex flex-col lg:flex-row gap-16 items-center">
                         <div className="lg:w-1/2">
                             <span className="text-ros-orange font-bold uppercase tracking-widest text-xs mb-4 block">Pneumatic Power Generation</span>
-                            <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-8 leading-tight">
+                            <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-8 leading-tight text-ros-blue">
                                 Power Packs & Test Benches
                             </h1>
                             <p className="text-xl text-gray-600 mb-10 font-medium">

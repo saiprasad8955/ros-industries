@@ -1,6 +1,5 @@
 import { getDictionary } from '@/app/utils/get-dictionary';
 import { Check } from 'lucide-react';
-
 import Image from 'next/image';
 
 export default async function FiltrationPage({ params }: { params: Promise<{ lang: string }> }) {
@@ -39,7 +38,7 @@ export default async function FiltrationPage({ params }: { params: Promise<{ lan
             </section>
 
             <div className="container-custom py-16">
-                <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-100 flex flex-col lg:flex-row gap-12">
+                <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-100 flex flex-col lg:flex-row gap-12 items-center">
                     <div className="lg:w-1/2 order-2 lg:order-1">
                         <h2 className="text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3">
                             <span className="w-2 h-8 bg-ros-blue rounded-full"></span>
@@ -58,10 +57,15 @@ export default async function FiltrationPage({ params }: { params: Promise<{ lan
                         </div>
                     </div>
 
-                    <div className="lg:w-1/2 order-1 lg:order-2">
-                        <div className="bg-linear-to-br from-gray-50 to-gray-100 rounded-2xl h-full min-h-[400px] flex items-center justify-center relative overflow-hidden">
-                            {/* Placeholder for Filtration Image */}
-                            <div className="text-gray-400 font-medium">Filtration Trolley Image</div>
+                    <div className="lg:w-1/2 order-1 lg:order-2 w-full">
+                        <div className="bg-linear-to-br from-gray-50 to-gray-100 rounded-2xl aspect-[4/3] w-full flex items-center justify-center relative overflow-hidden shadow-inner group">
+                            {/* Filtration Image */}
+                            <Image
+                                src="/filtration-trolley.png"
+                                alt="Filtration Trolley"
+                                fill
+                                className="object-contain p-8 group-hover:scale-105 transition-transform duration-500"
+                            />
                         </div>
                     </div>
                 </div>

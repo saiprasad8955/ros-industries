@@ -20,7 +20,7 @@ export default async function OilPurificationPage({ params }: { params: Promise<
                         sizes="100vw"
                         priority
                     />
-                    <div className="absolute inset-0 bg-ros-gray-dark/40 mix-blend-multiply" />
+                    <div className="absolute inset-0 mix-blend-multiply" />
                     <div className="absolute inset-0 bg-linear-to-t from-white via-transparent to-transparent" />
                 </div>
 

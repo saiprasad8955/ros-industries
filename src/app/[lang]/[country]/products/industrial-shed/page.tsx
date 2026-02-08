@@ -1,6 +1,5 @@
 import { getDictionary } from '@/app/utils/get-dictionary';
 import { Warehouse, CheckCircle2, Ruler, Cog } from 'lucide-react';
-
 import Image from 'next/image';
 
 export default async function IndustrialShedPage({ params }: { params: Promise<{ lang: string }> }) {
@@ -72,13 +71,27 @@ export default async function IndustrialShedPage({ params }: { params: Promise<{
                         </div>
                     </div>
 
-                    <div className="lg:w-1/2 bg-gray-50 relative min-h-[400px]">
-                        {/* Placeholder for Industrial Shed Image */}
-                        <div className="absolute inset-0 flex items-center justify-center text-gray-400 font-medium bg-gray-100">
-                            Industrial Shed Images provided by user (To be inserted)
+                    <div className="lg:w-1/2 bg-gray-50 relative min-h-[400px] flex items-center justify-center group overflow-hidden">
+                        {/* Image generation failed, utilizing header bg again or just visual pattern */}
+                        <Image
+                            src="/sheds-bg.png"
+                            alt="Industrial Structure Detail"
+                            fill
+                            className="object-cover group-hover:scale-110 transition-transform duration-1000"
+                        />
+                        <div className="absolute inset-0 bg-ros-blue/20 mix-blend-overlay" />
+
+                        <div className="absolute bottom-8 left-8 right-8 bg-white/90 backdrop-blur-md p-6 rounded-2xl shadow-lg border border-white/50">
+                            <div className="flex items-center gap-4">
+                                <div className="bg-ros-orange p-3 rounded-full text-white">
+                                    <Warehouse className="w-6 h-6" />
+                                </div>
+                                <div>
+                                    <p className="font-bold text-gray-900">Heavy Duty Construction</p>
+                                    <p className="text-sm text-gray-600">Engineered for durability</p>
+                                </div>
+                            </div>
                         </div>
-                        {/* We can use the images uploaded by the user here in a real implementation */}
-                        {/* User uploaded 2 images, one of them showing sheds. */}
                     </div>
                 </div>
 

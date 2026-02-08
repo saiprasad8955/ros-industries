@@ -21,12 +21,12 @@ export default async function PneumaticHosesFittingsPage({ params }: { params: P
                         priority
                     />
                     <div className="absolute inset-0 bg-ros-blue/30 mix-blend-multiply" />
-                    <div className="absolute inset-0 bg-linear-to-r from-ros-gray-dark via-ros-gray-dark/40 to-transparent" />
+                    <div className="absolute inset-0 " />
                 </div>
 
                 <div className="container-custom relative z-10 text-white">
                     <div className="max-w-2xl">
-                        <span className="text-ros-blue font-bold uppercase tracking-[0.3em] text-[10px] mb-4 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full inline-block">Transmission & Connections</span>
+                        <span className="text-ros-orange font-bold uppercase tracking-[0.3em] text-[10px] mb-4 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full inline-block">Transmission & Connections</span>
                         <h1 className="text-5xl md:text-7xl font-extrabold mb-8 leading-[0.9] tracking-tighter">
                             {t.title}
                         </h1>

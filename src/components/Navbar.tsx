@@ -153,12 +153,6 @@ export default function Navbar({ dict, lang, country }: { dict?: Dictionary['nav
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-4">
           <RegionSelector lang={lang} country={country} />
-          <div className="h-6 w-px bg-gray-300"></div>
-          <Link href="#contact" className="p-2 transition-all duration-200 rounded-full text-gray-500 hover:text-ros-blue hover:bg-gray-100" title={dict.login}>
-            <User className="h-5 w-5" />
-            <span className="sr-only">{dict.login}</span>
-          </Link>
-
           <Link
             href={`/${lang || 'en'}/${country || 'us'}/request-quote`}
             className="group relative inline-flex items-center justify-center gap-4 overflow-hidden rounded-full bg-ros-blue px-6 py-2.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:bg-teal-600 hover:scale-105 hover:shadow-ros-blue/25"

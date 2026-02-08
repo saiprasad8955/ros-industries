@@ -15,17 +15,33 @@ export default async function AirPreparationPage({ params }: { params: Promise<{
 
     return (
         <div className="bg-white min-h-screen">
-            {/* Minimalist Hero */}
-            <section className="bg-ros-gray-dark text-white pt-40 pb-24">
-                <div className="container-custom">
-                    <div className="max-w-4xl mx-auto text-center">
-                        <span className="text-ros-orange font-bold uppercase tracking-widest text-sm mb-6 block">Clean Air Supply</span>
-                        <h1 className="text-5xl md:text-7xl font-extrabold mb-8 tracking-tighter">
-                            {t.title}
-                        </h1>
-                        <p className="text-xl text-gray-400 font-medium leading-relaxed">
-                            {t.subtitle}
-                        </p>
+            {/* Split Hero with Image */}
+            <section className="bg-ros-gray-dark text-white pt-32 pb-24 overflow-hidden relative">
+                {/* Background decoration */}
+                <div className="absolute top-0 right-0 w-1/2 h-full bg-ros-blue/5 skew-x-12 translate-x-1/4" />
+
+                <div className="container-custom relative z-10">
+                    <div className="flex flex-col lg:flex-row items-center gap-16">
+                        <div className="lg:w-1/2 text-left">
+                            <span className="text-ros-orange font-bold uppercase tracking-widest text-sm mb-6 block">Clean Air Supply</span>
+                            <h1 className="text-5xl text-ros-blue md:text-7xl font-extrabold mb-8 tracking-tighter leading-tight">
+                                {t.title}
+                            </h1>
+                            <p className="text-xl text-gray-400 font-medium leading-relaxed max-w-xl">
+                                {t.subtitle}
+                            </p>
+                        </div>
+                        <div className="lg:w-1/2 relative aspect-square w-full max-w-lg">
+                            <div className="absolute inset-0 bg-ros-blue/20 rounded-full blur-3xl opacity-30" />
+                            <Image
+                                src="/air-preparation-hero.png"
+                                alt="FRL Unit - Air Preparation"
+                                width={600}
+                                height={600}
+                                className="relative z-10 object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+                                priority
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
